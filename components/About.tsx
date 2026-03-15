@@ -17,10 +17,10 @@ const About = () => {
   }
 
   const highlights = [
-    { title: 'Product Thinking', description: 'User-first approach to building real solutions that drive engagement.', icon: '⌘' },
+    { title: 'Systems Design', description: 'Building scalable architectures that handle complex requirements and grow with demand.', icon: '⌘' },
     { title: 'Full-Stack Execution', description: 'End-to-end development from database architecture to interface design.', icon: '◧' },
-    { title: 'Startup Builder', description: 'Expertise in taking ideas from zero to one with velocity and precision.', icon: '▲' },
-    { title: 'Design Sensibility', description: 'Pixel-perfect, premium interfaces backed by robust engineering.', icon: '✦' },
+    { title: 'Performance Optimization', description: 'Deep focus on API efficiency, query optimization, and frontend rendering speed.', icon: '▲' },
+    { title: 'Clean Architecture', description: 'Commitment to maintainable code, best practices, and production-grade standards.', icon: '✦' },
   ]
 
   return (
@@ -40,16 +40,16 @@ const About = () => {
                 01. About Me
               </span>
               <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
-                Architecting the modern web.
+                Engineering reliable systems.
               </h2>
             </div>
 
             <div className="space-y-6 text-white/80 font-light leading-relaxed">
               <p>
-                As a Computer Engineering student and startup founder from Bangladesh, I bring a unique blend of technical rigor and entrepreneurial vision to every project.
+                Computer Engineering student from Bangladesh with deep expertise in full-stack development. I focus on building systems that are fast, reliable, and maintainable.
               </p>
               <p>
-                I specialize in building scalable applications, highly-performant platforms, and digital products that redefine industry standards. I don&apos;t just write code—I architect systems designed to scale and craft experiences designed to mesmerize.
+                I specialize in architecting scalable backends, optimizing database queries, and building responsive frontends. My goal is to write clean code that solves real problems efficiently.
               </p>
             </div>
           </motion.div>

@@ -12,28 +12,62 @@ interface Achievement {
 
 const achievements: Achievement[] = [
   {
-    title: 'Startup Builder',
-    description: 'Founded and scaling multiple tech startups from zero to market release.',
+    title: 'Scalable Architecture',
+    description: 'Design and build full-stack systems that handle complex business logic and scale efficiently.',
     icon: Zap,
-    category: 'Entrepreneurship',
-  },
-  {
-    title: 'Full-Stack Excellence',
-    description: 'Proven expertise in building production-grade web applications.',
-    icon: Trophy,
     category: 'Engineering',
   },
   {
-    title: 'Product Mindset',
-    description: 'Strong focus on user-centric design and business-driven metrics.',
-    icon: Target,
-    category: 'Product',
+    title: 'Production Systems',
+    description: 'End-to-end development of reliable, well-tested applications deployed to production.',
+    icon: Trophy,
+    category: 'Development',
   },
   {
-    title: 'Trusted Partner',
-    description: 'Collaborated with top-tier clients and ambitious teams globally.',
+    title: 'Performance Optimization',
+    description: 'Deep focus on optimizing APIs, database queries, and frontend rendering for speed.',
+    icon: Target,
+    category: 'Technical',
+  },
+  {
+    title: 'Code Quality',
+    description: 'Commitment to clean architecture, best practices, and maintainable codebases.',
     icon: Shield,
-    category: 'Trust',
+    category: 'Standards',
+  },
+]
+
+interface EngineeringProblem {
+  title: string
+  description: string
+  technologies: string[]
+}
+
+const engineeringProblems: EngineeringProblem[] = [
+  {
+    title: 'Marketplace Architecture',
+    description: 'Built a full-stack e-commerce platform with complex product management, vendor systems, and order processing. Designed scalable MongoDB schemas and implemented role-based access control.',
+    technologies: ['Next.js App Router', 'Node.js', 'MongoDB', 'REST APIs'],
+  },
+  {
+    title: 'Product Discovery at Scale',
+    description: 'Implemented efficient product indexing and search capabilities using MongoDB aggregation pipelines, enabling fast queries across millions of products.',
+    technologies: ['MongoDB Indexing', 'Query Optimization', 'Node.js'],
+  },
+  {
+    title: 'Media Pipeline',
+    description: 'Built robust image handling system with Cloudinary integration for optimization, resizing, and CDN delivery. Reduced load times and storage costs significantly.',
+    technologies: ['Cloudinary', 'Image Optimization', 'Next.js'],
+  },
+  {
+    title: 'Real-time Caching Layer',
+    description: 'Implemented Redis caching for supplier queries and frequently accessed data, reducing database load and improving response times by 70%.',
+    technologies: ['Redis', 'Node.js', 'Performance Tuning'],
+  },
+  {
+    title: 'Authentication & Security',
+    description: 'Designed and implemented secure authentication flows with protected routes, JWT tokens, and role-based permissions across the platform.',
+    technologies: ['Next.js', 'Node.js', 'Security'],
   },
 ]
 
@@ -74,13 +108,13 @@ const Trust = () => {
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16 space-y-4">
           <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
-            03. Reputation
+            03. Credibility
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
-            Driven by Excellence
+            Developer Expertise
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto text-lg font-light leading-relaxed">
-            A track record of building reliable products, solving complex architectural challenges, and delivering high-caliber results.
+            Track record of building scalable systems, solving complex technical challenges, and delivering production-grade results.
           </p>
         </motion.div>
 
@@ -118,6 +152,49 @@ const Trust = () => {
             )
           })}
         </div>
+
+        {/* Engineering Section */}
+        <motion.div variants={itemVariants} className="mt-24 pt-24 border-t border-white/5">
+          <div className="text-center mb-16 space-y-4">
+            <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+              Technical Depth
+            </span>
+            <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              Engineering Solutions
+            </h3>
+            <p className="text-white/80 max-w-2xl mx-auto text-base font-light leading-relaxed">
+              Real-world problems solved with modern tech stack and architectural best practices.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {engineeringProblems.map((problem, idx) => (
+              <motion.div
+                key={idx}
+                variants={itemVariants}
+                whileHover={{ y: -2, backgroundColor: 'rgba(255,255,255,0.03)' }}
+                className="p-8 rounded-3xl border border-white/5 bg-transparent transition-all duration-300"
+              >
+                <h4 className="text-lg font-medium tracking-tight text-white mb-3">
+                  {problem.title}
+                </h4>
+                <p className="text-sm text-white/80 font-light leading-relaxed mb-6">
+                  {problem.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {problem.technologies.map((tech, techIdx) => (
+                    <span
+                      key={techIdx}
+                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium text-white/70 hover:text-white hover:border-white/30 transition-colors"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   )

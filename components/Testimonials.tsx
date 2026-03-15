@@ -6,21 +6,21 @@ import { Star } from 'lucide-react'
 const testimonials = [
   {
     quote: 'Talha has a rare balance of technical execution and product intuition. He doesn\'t just build features—he builds systems. Fast, detail-oriented, and genuinely cares about solving structural problems.',
-    author: 'Alex Chen',
-    role: 'Product Manager',
-    company: 'Tech Startup',
+    author: 'Obaidul Qadir',
+    role: 'Founder & CEO',
+    company: 'PROSPECT BD LTD',
   },
   {
     quote: 'Working with Talha on scaling challenges has been exceptional. He brings both frontend finesse and backend rigor. Delivered complex architectural projects ahead of timeline with supreme code quality.',
-    author: 'Samir Patel',
-    role: 'CTO',
-    company: 'E-Commerce Platform',
+    author: 'MD Saiful Islam Bhuiyan',
+    role: 'CMO & Co-Founder',
+    company: 'PROSPECT BD LTD',
   },
   {
-    quote: 'What impressed me most was Talha\&apos;s approach to product design. He doesn\'t just code—he thinks about UX, scalability, and lifecycle impact. A genuine full-stack builder with a true founder\&apos;s mindset.',
-    author: 'Maria Rodriguez',
-    role: 'Designer & Founder',
-    company: 'Design Agency',
+    quote: 'What impressed me most was talha\'s approach to product design. He doesn\'t just code—he thinks about UX, scalability, and lifecycle impact. A genuine full-stack builder with a true founder\&apos;s mindset.',
+    author: 'Anika Tabassum Tisiya',
+    role: 'Founder and Team Lead',
+    company: 'BASHA BHARA',
   },
 ]
 

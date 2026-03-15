@@ -64,7 +64,7 @@ const Hero = () => {
                 className="w-2 h-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"
               />
               <span className="text-[11px] font-medium text-zinc-300 tracking-wide uppercase">
-                Currently building ShilpoMarket & BashaBhara
+                Available for opportunities
               </span>
             </div>
           </motion.div>
@@ -81,7 +81,7 @@ const Hero = () => {
               and solve problems.
             </h1>
             <p className="text-lg text-white/80 leading-relaxed max-w-xl font-light">
-              Full-stack developer & startup founder. I build scalable web platforms, modern SaaS products, and digital experiences that define the standard.
+              Full-stack developer who builds scalable systems, optimized backends, and pixel-perfect frontends. I specialize in solving complex engineering problems with modern tech.
             </p>
           </motion.div>
 
@@ -91,9 +91,9 @@ const Hero = () => {
             className="grid grid-cols-3 gap-4 pt-4 max-w-lg"
           >
             {[
-              { label: 'Full-Stack', icon: '⌘' },
-              { label: 'Product', icon: '✦' },
-              { label: 'Founder', icon: '▲' },
+              { label: 'Frontend', icon: '⌘' },
+              { label: 'Backend', icon: '✦' },
+              { label: 'Database', icon: '▲' },
             ].map((badge, idx) => (
               <motion.div
                 key={idx}

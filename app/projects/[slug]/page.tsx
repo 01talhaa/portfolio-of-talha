@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ExternalLink, Github, ChevronRight } from 'lucide-react'
+import { ArrowLeft, ExternalLink, Github, ChevronRight, Facebook, Instagram } from 'lucide-react'
 import { projectsData } from '@/data/projects'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -86,7 +86,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             <p className="text-[10px] text-white/80 uppercase tracking-widest mb-1">Client</p>
                             <p className="text-sm font-medium">{project.client}</p>
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 flex-wrap">
                             {project.liveLink && (
                                 <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white/20 hover:bg-white hover:text-black transition-colors" aria-label="Live Project">
                                     <ExternalLink size={16} />
@@ -95,6 +95,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             {project.githubLink && (
                                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white/20 hover:bg-white hover:text-black transition-colors" aria-label="Source Code">
                                     <Github size={16} />
+                                </a>
+                            )}
+                            {project.socialLinks?.instagram && (
+                                <a href={project.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white/20 hover:bg-white hover:text-black transition-colors" aria-label="Instagram">
+                                    <Instagram size={16} />
+                                </a>
+                            )}
+                            {project.socialLinks?.facebook && (
+                                <a href={project.socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white/20 hover:bg-white hover:text-black transition-colors" aria-label="Facebook">
+                                    <Facebook size={16} />
                                 </a>
                             )}
                         </div>

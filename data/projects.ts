@@ -15,6 +15,10 @@ export interface Project {
     client: string;
     liveLink?: string;
     githubLink?: string;
+    socialLinks?: {
+        facebook?: string;
+        instagram?: string;
+    };
 
     caseStudy: {
         challenge: string;
@@ -43,9 +47,13 @@ export const projectsData: Project[] = [
             '/projects/shilpomarket/transaction.png',
         ],
         role: 'Founder & Full-Stack Engineer',
-        timeline: '2023 - Present',
+        timeline: '2025 - Present',
         client: 'Internal Startup',
         liveLink: 'https://shilpomarket.com',
+        socialLinks: {
+            facebook: 'https://www.facebook.com/profile.php?id=61578125325933',
+            instagram: 'https://www.instagram.com/shilpomarket/',
+        },
         caseStudy: {
             challenge: 'The raw material supply chain in Bangladesh is highly fragmented, relying on manual processes and offline networks. Connecting buyers with reliable suppliers required significant physical effort and lacked transparency in pricing and quality.',
             solution: 'I architected a comprehensive B2B marketplace from the ground up. The platform features robust supplier verification pipelines, dynamic product catalogs, and a highly performant search algorithm to instantly match businesses with the right materials. The infrastructure was built on Next.js and MongoDB to ensure rapid scaling and high availability.',
@@ -76,9 +84,13 @@ export const projectsData: Project[] = [
             '/projects/pqrix/insights.png',
         ],
         role: 'Founder & Lead Developer',
-        timeline: '2023 - Present',
+        timeline: '2024 - Present',
         client: 'Internal Agency Platform',
         liveLink: 'https://pqrix.com',
+        socialLinks: {
+            instagram: 'https://www.instagram.com/pqrix_tech/',
+            facebook: 'https://www.facebook.com/profile.php?id=61582368202007',
+        },
         caseStudy: {
             challenge: 'Creating an agency presence that stands out in a crowded market requires more than just a portfolio. It demands a highly immersive, premium digital experience that instantly communicates technical excellence and establishes trust with high-value clients.',
             solution: 'I engineered the PQRIX Tech platform using React, Next.js, and Framer Motion to create a fluid, premium experience. The architecture focuses on performance optimization (sub-second load times) and a meticulously crafted monochrome design language that guides prospective clients seamlessly toward conversion.',
@@ -108,9 +120,13 @@ export const projectsData: Project[] = [
             '/projects/basha/subscription.png',
         ],
         role: 'Full-Stack Developer',
-        timeline: '2022',
-        client: 'Independent Project',
+        timeline: '2026',
+        client: 'PQRIX Tech',
         liveLink: 'https://bashabhara.com',
+        socialLinks: {
+            instagram: 'https://www.instagram.com/basha_bhara/',
+            facebook: 'https://www.facebook.com/profile.php?id=61587539107312',
+        },
         caseStudy: {
             challenge: 'Property seekers in urban areas face incredibly difficult discovery processes, dealing with fragmented Facebook groups, outdated classifieds, and a lack of verified information regarding property features and location specifics.',
             solution: 'Developed a streamlined, user-focused property rental engine. The platform utilizes advanced state management via Redux and real-time database capabilities via Firebase to provide instant search and filtering. The backend infrastructure was built with Express.js to handle secure user authentication and property verification workflows.',
