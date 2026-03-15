@@ -31,13 +31,13 @@ const Projects = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="mb-24 space-y-6">
-          <span className="text-xs font-medium tracking-[0.2em] text-zinc-500 uppercase">
+          <span className="text-xs font-medium tracking-[0.2em] text-white/80 uppercase">
             05. Featured Work
           </span>
           <h2 className="text-5xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
             Selected Projects
           </h2>
-          <p className="text-lg text-zinc-400 font-light max-w-2xl">
+          <p className="text-lg text-white/80 font-light max-w-2xl">
             Curated selection of engineering and product work built with precision.
           </p>
         </motion.div>
@@ -88,7 +88,7 @@ const Projects = () => {
                 <Link href={`/projects/${project.slug}`}>
                   <motion.h3
                     whileHover={{ x: 4 }}
-                    className="text-3xl sm:text-4xl font-bold tracking-tight text-white transition-colors hover:text-zinc-300 cursor-pointer"
+                    className="text-3xl sm:text-4xl font-bold tracking-tight text-white transition-colors hover:text-white/80 cursor-pointer"
                   >
                     {project.title}
                   </motion.h3>
@@ -96,10 +96,10 @@ const Projects = () => {
 
                 {/* Descriptions */}
                 <div className="space-y-3">
-                  <p className="text-base font-medium text-zinc-300 tracking-wide">
+                  <p className="text-base font-medium text-white/80 tracking-wide">
                     {project.shortDesc}
                   </p>
-                  <p className="text-base text-zinc-400 font-light leading-relaxed max-w-2xl">
+                  <p className="text-base text-white/80 font-light leading-relaxed max-w-2xl">
                     {project.fullDesc}
                   </p>
                 </div>
@@ -110,13 +110,13 @@ const Projects = () => {
                     <motion.span
                       key={t}
                       whileHover={{ y: -2 }}
-                      className="px-3 py-1.5 rounded-lg text-xs font-medium border border-white/15 text-zinc-300 bg-white/5 hover:bg-white/10 transition-colors"
+                      className="px-3 py-1.5 rounded-lg text-xs font-medium border border-white/15 text-white/80 bg-white/5 hover:bg-white/10 transition-colors"
                     >
                       {t}
                     </motion.span>
                   ))}
                   {project.tech.length > 6 && (
-                    <span className="px-3 py-1.5 rounded-lg text-xs font-medium text-zinc-500">
+                    <span className="px-3 py-1.5 rounded-lg text-xs font-medium text-white/80">
                       +{project.tech.length - 6}
                     </span>
                   )}

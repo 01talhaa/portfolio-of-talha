@@ -47,19 +47,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             <article className="pt-32 pb-24 px-6 sm:px-8 max-w-5xl mx-auto">
                 {/* Navigation Breadcrumb */}
-                <div className="flex items-center gap-2 text-sm text-zinc-500 font-medium mb-12">
+                <div className="flex items-center gap-2 text-sm text-white/80 font-medium mb-12">
                     <Link href="/#projects" className="hover:text-white transition-colors flex items-center gap-2">
                         <ArrowLeft size={14} /> Back to Projects
                     </Link>
                     <ChevronRight size={14} className="opacity-50" />
-                    <span className="text-zinc-300">{project.title}</span>
+                    <span className="text-white/80">{project.title}</span>
                 </div>
 
                 {/* Header Section */}
                 <header className="space-y-8 mb-16">
                     <div className="flex flex-wrap items-center gap-3">
                         {project.tech.map((t) => (
-                            <span key={t} className="px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border border-white/10 text-zinc-400 bg-white/5">
+                            <span key={t} className="px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border border-white/10 text-white/80 bg-white/5">
                                 {t}
                             </span>
                         ))}
@@ -69,21 +69,21 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         {project.title}
                     </h1>
 
-                    <p className="text-xl sm:text-2xl text-zinc-400 font-light max-w-3xl leading-relaxed">
+                    <p className="text-xl sm:text-2xl text-white/80 font-light max-w-3xl leading-relaxed">
                         {project.shortDesc} — {project.fullDesc}
                     </p>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-white/10">
                         <div>
-                            <p className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Role</p>
+                            <p className="text-[10px] text-white/80 uppercase tracking-widest mb-1">Role</p>
                             <p className="text-sm font-medium">{project.role}</p>
                         </div>
                         <div>
-                            <p className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Timeline</p>
+                            <p className="text-[10px] text-white/80 uppercase tracking-widest mb-1">Timeline</p>
                             <p className="text-sm font-medium">{project.timeline}</p>
                         </div>
                         <div>
-                            <p className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Client</p>
+                            <p className="text-[10px] text-white/80 uppercase tracking-widest mb-1">Client</p>
                             <p className="text-sm font-medium">{project.client}</p>
                         </div>
                         <div className="flex items-center gap-3">
@@ -109,7 +109,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     {/* Challenge */}
                     <div className="space-y-6">
                         <h2 className="text-2xl font-semibold tracking-tight">The Challenge</h2>
-                        <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/5 font-light text-zinc-300 leading-relaxed text-lg">
+                        <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/5 font-light text-white/80 leading-relaxed text-lg">
                             {project.caseStudy.challenge}
                         </div>
                     </div>
@@ -117,7 +117,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     {/* Solution */}
                     <div className="space-y-6">
                         <h2 className="text-2xl font-semibold tracking-tight">The Solution</h2>
-                        <div className="font-light text-zinc-300 leading-relaxed text-lg space-y-4">
+                        <div className="font-light text-white/80 leading-relaxed text-lg space-y-4">
                             <p>{project.caseStudy.solution}</p>
                         </div>
                     </div>
@@ -128,8 +128,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         <ul className="space-y-4">
                             {project.caseStudy.outcomes.map((outcome, idx) => (
                                 <li key={idx} className="flex gap-4 p-4 rounded-xl border border-white/10 bg-white/[0.02]">
-                                    <span className="text-sm font-mono text-zinc-500 mt-1">0{idx + 1}</span>
-                                    <p className="text-zinc-300 font-light">{outcome}</p>
+                                    <span className="text-sm font-mono text-white/80 mt-1">0{idx + 1}</span>
+                                    <p className="text-white/80 font-light">{outcome}</p>
                                 </li>
                             ))}
                         </ul>
@@ -138,7 +138,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     {/* Current Situation */}
                     <div className="space-y-6">
                         <h2 className="text-2xl font-semibold tracking-tight">Current Situation</h2>
-                        <p className="font-light text-zinc-400 leading-relaxed text-lg">
+                        <p className="font-light text-white/80 leading-relaxed text-lg">
                             {project.caseStudy.currentSituation}
                         </p>
                     </div>

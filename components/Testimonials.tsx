@@ -49,13 +49,13 @@ const Testimonials = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
             07. Client Feedback
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
             Trusted by Builders
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto font-light text-lg">
+          <p className="text-white/80 max-w-2xl mx-auto font-light text-lg">
             Direct perspectives from founders, engineering leads, and stakeholders I&apos;ve had the privilege to collaborate with.
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Quote */}
-                <p className="text-zinc-400 mb-8 leading-relaxed font-light text-sm tracking-wide">
+                <p className="text-white/80 mb-8 leading-relaxed font-light text-sm tracking-wide">
                   &quot;{t.quote}&quot;
                 </p>
               </div>
@@ -90,7 +90,7 @@ const Testimonials = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white text-sm">{t.author}</p>
-                  <p className="text-xs text-zinc-500">{t.role} <span className="text-zinc-600 mx-1">•</span> {t.company}</p>
+                  <p className="text-xs text-white/80">{t.role} <span className="text-white/80 mx-1">•</span> {t.company}</p>
                 </div>
               </div>
             </motion.div>

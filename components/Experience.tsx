@@ -6,7 +6,7 @@ const experiences = [
   {
     role: 'Founder & Full-Stack Engineer',
     company: 'ShilpoMarket',
-    period: '2023 - Present',
+    period: '2025 - Present',
     highlights: [
       'Architecting a comprehensive B2B marketplace to connect businesses with raw material suppliers.',
       'Driving full-stack execution from initial data modeling and architecture to production deployment.',
@@ -17,7 +17,7 @@ const experiences = [
   {
     role: 'Founder & Lead Developer',
     company: 'PQRIX Tech',
-    period: '2023 - Present',
+    period: '2024 - Present',
     highlights: [
       'Engineered a modern SaaS agency terminal with a focus on high-conversion UI/UX.',
       'Implemented robust, highly-concurrent architecture to handle global client requests.',
@@ -25,15 +25,27 @@ const experiences = [
       'Enforcing strict code quality, performance auditing, and service reliability metrics.',
     ],
   },
-  {
-    role: 'Product Builder',
-    company: 'Independent Ventures',
-    period: '2022 - Present',
+    {
+    role: 'Basha Bhara',
+    company: 'Basha Bhara',
+    period: '2025(end) - Present',
     highlights: [
-      'Shipped multiple resilient, end-to-end web applications scaling to robust user bases.',
-      'Deepened full-stack proficiency utilizing edge-networks and the modern serverless ecosystem.',
-      'Maintained an obsessive focus on seamless user experiences, scalable backend patterns, and clean architecture.',
-      'Demonstrated high-velocity execution in transforming concepts into market-ready assets.',
+      'Bangladesh’s first ai based home rental platform, connecting tenants with landlords through a seamless digital experience.',
+      'Implemented cutting-edge AI algorithms to enhance property matching and user experience.',
+      'Verified owners and properties to ensure trust and reliability.',
+      'Community support for both tenants and landlords.',
+      'Own messaging system for seamless communication and safety.',
+    ],
+  },
+    {
+    role: 'Prospect Bd',
+    company: 'Prospect Bd Ltd.',
+    period: '2024 - 2026',
+    highlights: [
+      'Worked as a Frontend Developer (mainly with next.js, vue.js and other frameworks).',
+      'Worked on developing responsive and interactive user interfaces.',
+      'Collaborated in multiple cross-functional teams to deliver high-quality software solutions.',
+      'Jump into jobs and GrandSampanResort, these Projects are mentionable.',
     ],
   },
 ]
@@ -63,13 +75,13 @@ const Experience = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
             02. Professional Journey
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
             Experience & Impact
           </h2>
-          <p className="text-zinc-400 text-lg font-light max-w-2xl leading-relaxed">
+          <p className="text-white/80 text-lg font-light max-w-2xl leading-relaxed">
             A timeline of building ambitious products, architecting robust systems, and delivering measurable impact.
           </p>
         </motion.div>
@@ -94,17 +106,17 @@ const Experience = () => {
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                   <div>
                     <h3 className="text-xl font-medium tracking-tight text-white mb-1">{exp.role}</h3>
-                    <p className="text-zinc-400 font-medium">{exp.company}</p>
+                    <p className="text-white/80 font-medium">{exp.company}</p>
                   </div>
                   <div className="inline-flex px-3 py-1.5 rounded-full border border-white/10 bg-white/5 h-fit">
-                    <span className="text-xs font-medium text-zinc-300 whitespace-nowrap">{exp.period}</span>
+                    <span className="text-xs font-medium text-white/80 whitespace-nowrap">{exp.period}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-3">
                   {exp.highlights.map((h, i) => (
-                    <li key={i} className="flex gap-4 text-sm text-zinc-400 font-light leading-relaxed">
-                      <span className="text-zinc-600 flex-shrink-0 mt-1">—</span>
+                    <li key={i} className="flex gap-4 text-sm text-white/80 font-light leading-relaxed">
+                      <span className="text-white/80 flex-shrink-0 mt-1">—</span>
                       {h}
                     </li>
                   ))}

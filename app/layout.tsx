@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   keywords: 'full-stack developer, startup founder, Next.js, React, product builder, Bangladesh',
   authors: [{ name: 'ABS Talha' }],
   viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+  },
   openGraph: {
     title: 'ABS Talha - Full-Stack Developer & Startup Builder',
     description: 'Building products that look sharp, scale well, and solve real problems.',

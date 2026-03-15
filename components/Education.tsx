@@ -61,13 +61,13 @@ const Education = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
             04. Academic Background
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
             Education
           </h2>
-          <p className="text-zinc-400 text-lg font-light">
+          <p className="text-white/80 text-lg font-light">
             Building rigorous foundations in computer science and modern engineering paradigms.
           </p>
         </motion.div>
@@ -86,16 +86,16 @@ const Education = () => {
                   <h3 className="text-2xl font-medium tracking-tight text-white mb-2">
                     {edu.degree}
                   </h3>
-                  <p className="text-lg text-zinc-300 font-medium mb-1">
+                  <p className="text-lg text-white/80 font-medium mb-1">
                     {edu.school}
                   </p>
-                  <p className="text-zinc-500 font-light">
+                  <p className="text-white/80 font-light">
                     {edu.field}
                   </p>
                 </div>
                 <div className="sm:text-right">
                   <div className="inline-flex px-3 py-1 rounded-full border border-white/10 bg-white/5">
-                    <p className="text-xs text-zinc-300 font-medium whitespace-nowrap">
+                    <p className="text-xs text-white/80 font-medium whitespace-nowrap">
                       {edu.period}
                     </p>
                   </div>
@@ -106,8 +106,8 @@ const Education = () => {
               <div className="space-y-4 pt-6 border-t border-white/10">
                 {edu.details.map((detail, idx) => (
                   <div key={idx} className="flex items-start gap-4">
-                    <CheckCircle size={18} className="text-zinc-500 flex-shrink-0 mt-0.5" />
-                    <p className="text-zinc-400 font-light leading-relaxed">{detail}</p>
+                    <CheckCircle size={18} className="text-white/80 flex-shrink-0 mt-0.5" />
+                    <p className="text-white/80 font-light leading-relaxed">{detail}</p>
                   </div>
                 ))}
               </div>

@@ -76,13 +76,13 @@ const Contact = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
             08. Communication
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
             Initialize Contact
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto font-light text-lg">
+          <p className="text-white/80 max-w-2xl mx-auto font-light text-lg">
             Have an ambitious project, a systemic challenge, or a venture in mind? Let&apos;s engineer the solution together.
           </p>
         </motion.div>
@@ -92,7 +92,7 @@ const Contact = () => {
           <motion.div variants={itemVariants} className="bg-transparent border border-white/10 rounded-3xl p-8 sm:p-10 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-xs font-medium tracking-wider text-zinc-400 uppercase mb-2">
+                <label htmlFor="name" className="block text-xs font-medium tracking-wider text-white/80 uppercase mb-2">
                   Name
                 </label>
                 <input
@@ -108,7 +108,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-xs font-medium tracking-wider text-zinc-400 uppercase mb-2">
+                <label htmlFor="email" className="block text-xs font-medium tracking-wider text-white/80 uppercase mb-2">
                   Email Configuration
                 </label>
                 <input
@@ -124,7 +124,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-medium tracking-wider text-zinc-400 uppercase mb-2">
+                <label htmlFor="message" className="block text-xs font-medium tracking-wider text-white/80 uppercase mb-2">
                   Message Payload
                 </label>
                 <textarea
@@ -165,15 +165,15 @@ const Contact = () => {
                 >
                   <div className="flex items-center gap-6">
                     <div className="p-3 rounded-xl border border-white/10 bg-white/5 group-hover:bg-white group-hover:border-white transition-colors duration-300">
-                      <Icon className="w-6 h-6 text-zinc-400 group-hover:text-black transition-colors" />
+                      <Icon className="w-6 h-6 text-white/80 group-hover:text-black transition-colors" />
                     </div>
                     <div className="flex-1">
                       <p className="font-medium tracking-tight text-white mb-1">
                         {method.label}
                       </p>
-                      <p className="text-sm font-light text-zinc-500">{method.value}</p>
+                      <p className="text-sm font-light text-white/80">{method.value}</p>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-zinc-600 opacity-0 group-hover:opacity-100 group-hover:text-white transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    <ExternalLink className="w-5 h-5 text-white/80 opacity-0 group-hover:opacity-100 group-hover:text-white transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </div>
                 </motion.a>
               )

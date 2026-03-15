@@ -50,13 +50,13 @@ const TechStack = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-20 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
             06. Engineering Arsenal
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
             Technology Stack
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto font-light text-lg">
+          <p className="text-white/80 max-w-2xl mx-auto font-light text-lg">
             A comprehensive overview of the sophisticated tooling utilized to engineer reliable, hyper-scalable, and performant architectures.
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ const TechStack = () => {
           {techStack.map((cat, idx) => (
             <motion.div key={idx} variants={itemVariants} className="space-y-6">
               <div className="flex items-center gap-4">
-                <span className="text-xs font-mono text-zinc-600">0{idx + 1}</span>
+                <span className="text-xs font-mono text-white/80">0{idx + 1}</span>
                 <h3 className="text-lg font-medium tracking-tight text-white">{cat.category}</h3>
                 <div className="h-px flex-grow bg-white/5"></div>
               </div>
@@ -75,7 +75,7 @@ const TechStack = () => {
                   <motion.div
                     key={tech}
                     whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.05)' }}
-                    className="px-4 py-2 rounded-xl border border-white/10 bg-transparent text-sm font-medium text-zinc-400 hover:text-white hover:border-white/20 transition-all cursor-default"
+                    className="px-4 py-2 rounded-xl border border-white/10 bg-transparent text-sm font-medium text-white/80 hover:text-white hover:border-white/20 transition-all cursor-default"
                   >
                     {tech}
                   </motion.div>

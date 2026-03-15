@@ -80,7 +80,7 @@ const Hero = () => {
               <br />
               and solve problems.
             </h1>
-            <p className="text-lg text-zinc-400 leading-relaxed max-w-xl font-light">
+            <p className="text-lg text-white/80 leading-relaxed max-w-xl font-light">
               Full-stack developer & startup founder. I build scalable web platforms, modern SaaS products, and digital experiences that define the standard.
             </p>
           </motion.div>
@@ -137,7 +137,7 @@ const Hero = () => {
             <div className="flex items-center gap-2 justify-center lg:hidden">
               <span className="text-xs text-zinc-500 font-medium tracking-wide mr-2">Follow</span>
               <motion.a
-                href="https://github.com/talha"
+                href="https://github.com/01talhaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, backgroundColor: 'rgba(255,255,255,0.12)' }}
@@ -148,7 +148,7 @@ const Hero = () => {
                 <Github size={18} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/talha"
+                href="https://www.linkedin.com/in/abu-bakar-siddique-talha-802417215/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, backgroundColor: 'rgba(255,255,255,0.12)' }}
@@ -231,7 +231,7 @@ const Hero = () => {
             >
               <div className="flex-1 h-px bg-gradient-to-r from-transparent to-white/30 max-w-xs" />
               <motion.a
-                href="https://github.com/talha"
+                href="https://github.com/01talhaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ 
@@ -246,7 +246,7 @@ const Hero = () => {
                 <Github size={20} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/talha"
+                href="https://www.linkedin.com/in/abu-bakar-siddique-talha-802417215/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ 

@@ -36,7 +36,7 @@ const About = () => {
           {/* Header & Text */}
           <motion.div variants={itemVariants} className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
-              <span className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+              <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
                 01. About Me
               </span>
               <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
@@ -44,7 +44,7 @@ const About = () => {
               </h2>
             </div>
 
-            <div className="space-y-6 text-zinc-400 font-light leading-relaxed">
+            <div className="space-y-6 text-white/80 font-light leading-relaxed">
               <p>
                 As a Computer Engineering student and startup founder from Bangladesh, I bring a unique blend of technical rigor and entrepreneurial vision to every project.
               </p>
@@ -68,7 +68,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium tracking-tight text-white mb-2">{h.title}</h3>
-                  <p className="text-sm text-zinc-500 font-light leading-relaxed">{h.description}</p>
+                  <p className="text-sm text-white/80 font-light leading-relaxed">{h.description}</p>
                 </div>
               </motion.div>
             ))}

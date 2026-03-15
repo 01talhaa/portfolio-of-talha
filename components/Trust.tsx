@@ -73,13 +73,13 @@ const Trust = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-zinc-500 uppercase">
+          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
             03. Reputation
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
             Driven by Excellence
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto text-lg font-light leading-relaxed">
+          <p className="text-white/80 max-w-2xl mx-auto text-lg font-light leading-relaxed">
             A track record of building reliable products, solving complex architectural challenges, and delivering high-caliber results.
           </p>
         </motion.div>
@@ -97,20 +97,20 @@ const Trust = () => {
               >
                 {/* Icon */}
                 <div className="w-12 h-12 shrink-0 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-colors duration-300">
-                  <Icon className="text-zinc-400 group-hover:text-black transition-colors" size={20} />
+                  <Icon className="text-white/80 group-hover:text-black transition-colors" size={20} />
                 </div>
 
                 {/* Content */}
                 <div>
                   <div className="mb-2">
-                    <span className="text-[10px] font-medium text-zinc-500 uppercase tracking-widest">
+                    <span className="text-[10px] font-medium text-white/80 uppercase tracking-widest">
                       {achievement.category}
                     </span>
                   </div>
                   <h3 className="text-lg font-medium tracking-tight text-white mb-2">
                     {achievement.title}
                   </h3>
-                  <p className="text-sm text-zinc-400 font-light leading-relaxed">
+                  <p className="text-sm text-white/80 font-light leading-relaxed">
                     {achievement.description}
                   </p>
                 </div>
