@@ -2,6 +2,20 @@
 
 import { motion } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
+import { useEffect, useState } from 'react'
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return isMobile
+}
 
 interface EducationItem {
   degree: string
@@ -26,23 +40,25 @@ const educationData: EducationItem[] = [
 ]
 
 const Education = () => {
+  const isMobile = useIsMobile()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1,
+        staggerChildren: isMobile ? 0 : 0.1,
+        delayChildren: isMobile ? 0 : 0.1,
       },
     },
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0, x: isMobile ? 0 : -20 },
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: isMobile ? 0 : 0.8, ease: [0.16, 1, 0.3, 1] },
     },
   }
 
@@ -55,7 +71,7 @@ const Education = () => {
       <motion.div
         className="max-w-4xl mx-auto z-10 relative"
         variants={containerVariants}
-        initial="hidden"
+        initial={isMobile ? "visible" : "hidden"}
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >

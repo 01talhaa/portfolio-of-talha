@@ -1,29 +1,44 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Download, X, Github, Linkedin } from 'lucide-react'
 import Image from 'next/image'
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return isMobile
+}
+
 const Hero = () => {
   const [isAvatarExpanded, setIsAvatarExpanded] = useState(false)
+  const isMobile = useIsMobile()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.12,
-        delayChildren: 0.2,
+        staggerChildren: isMobile ? 0 : 0.12,
+        delayChildren: isMobile ? 0 : 0.2,
       },
     },
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: isMobile ? 0 : 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: isMobile ? 0 : 0.9, ease: [0.16, 1, 0.3, 1] },
     },
   }
 
@@ -36,7 +51,7 @@ const Hero = () => {
       <motion.div
         className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10"
         variants={containerVariants}
-        initial="hidden"
+        initial={isMobile ? "visible" : "hidden"}
         animate="visible"
       >
         {/* Left Content */}

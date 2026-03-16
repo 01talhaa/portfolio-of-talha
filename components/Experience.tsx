@@ -1,6 +1,20 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return isMobile
+}
 
 const experiences = [
   {
@@ -29,7 +43,7 @@ const experiences = [
       'Engineered payment gateway integration with Stripe, handling PCI compliance and secure transaction processing.',
     ],
   },
-    {
+  {
     role: 'Co-Founder & Lead Developer',
     company: 'Basha Bhara',
     period: '2025 - Present',
@@ -42,7 +56,7 @@ const experiences = [
       'Implemented geo-based search with MongoDB geospatial queries for location-aware property recommendations.',
     ],
   },
-    {
+  {
     role: 'Frontend Developer',
     company: 'Prospect Bd Ltd.',
     period: '2024 - 2026',
@@ -58,6 +72,67 @@ const experiences = [
 ]
 
 const Experience = () => {
+  const isMobile = useIsMobile()
+
+  // On mobile: skip all animation logic entirely — render static HTML instantly
+  if (isMobile) {
+    return (
+      <section id="experience" className="relative py-16 px-4 bg-black overflow-hidden border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
+          <div className="mb-12 space-y-3">
+            <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+              02. Professional Journey
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight text-white mb-4">
+              Experience & Impact
+            </h2>
+            <p className="text-white/70 text-base font-light max-w-2xl leading-relaxed">
+              A timeline of building ambitious products, architecting robust systems, and delivering measurable impact.
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="space-y-4">
+            {experiences.map((exp, idx) => (
+              <div key={idx} className="relative">
+                {/* Timeline Line */}
+                {idx !== experiences.length - 1 && (
+                  <div className="absolute left-[19px] top-12 bottom-[-16px] w-[1px] bg-white/10"></div>
+                )}
+
+                {/* Timeline Dot */}
+                <div className="absolute left-3 top-6 w-3 h-3 rounded-full border-2 border-zinc-500 bg-black z-10 box-content shadow-[0_0_0_6px_black]"></div>
+
+                <div className="ml-12 p-5 rounded-2xl border border-white/5 bg-transparent">
+                  <div className="flex flex-col gap-2 mb-4">
+                    <div>
+                      <h3 className="text-base font-medium tracking-tight text-white mb-0.5">{exp.role}</h3>
+                      <p className="text-white/70 text-sm font-medium">{exp.company}</p>
+                    </div>
+                    <div className="inline-flex self-start px-2.5 py-1 rounded-full border border-white/10 bg-white/5">
+                      <span className="text-xs font-medium text-white/70 whitespace-nowrap">{exp.period}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-2.5">
+                    {exp.highlights.map((h, i) => (
+                      <li key={i} className="flex gap-3 text-xs text-white/70 font-light leading-relaxed">
+                        <span className="text-white/50 flex-shrink-0 mt-0.5">—</span>
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  // Desktop: full animated version
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

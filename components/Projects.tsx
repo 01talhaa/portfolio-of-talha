@@ -4,20 +4,36 @@ import { motion } from 'framer-motion'
 import { ExternalLink, Github, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { projectsData } from '@/data/projects'
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return isMobile
+}
+
 const Projects = () => {
+  const isMobile = useIsMobile()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+      transition: { staggerChildren: isMobile ? 0 : 0.2, delayChildren: isMobile ? 0 : 0.1 },
     },
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+    hidden: { opacity: 0, y: isMobile ? 0 : 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: isMobile ? 0 : 0.8, ease: [0.16, 1, 0.3, 1] } },
   }
 
   return (
@@ -25,7 +41,7 @@ const Projects = () => {
       <motion.div
         className="max-w-7xl mx-auto z-10 relative"
         variants={containerVariants}
-        initial="hidden"
+        initial={isMobile ? "visible" : "hidden"}
         whileInView="visible"
         viewport={{ once: true, amount: 0.15 }}
       >

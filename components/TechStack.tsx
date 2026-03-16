@@ -1,6 +1,20 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  return isMobile
+}
 
 const techStack = [
   {
@@ -26,17 +40,19 @@ const techStack = [
 ]
 
 const TechStack = () => {
+  const isMobile = useIsMobile()
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+      transition: { staggerChildren: isMobile ? 0 : 0.08, delayChildren: isMobile ? 0 : 0.1 },
     },
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+    hidden: { opacity: 0, y: isMobile ? 0 : 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: isMobile ? 0 : 0.8, ease: [0.16, 1, 0.3, 1] } },
   }
 
   return (
@@ -44,7 +60,7 @@ const TechStack = () => {
       <motion.div
         className="max-w-6xl mx-auto z-10 relative"
         variants={containerVariants}
-        initial="hidden"
+        initial={isMobile ? "visible" : "hidden"}
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
