@@ -67,7 +67,7 @@ const stats = [
     icon: GitBranch,
     label: '2026 Contributions',
     value: '697',
-    description: 'March - Present',
+    description: 'January 2026 - Present',
     color: 'from-blue-500/20 to-blue-600/20',
     borderColor: 'border-blue-500/30',
   },

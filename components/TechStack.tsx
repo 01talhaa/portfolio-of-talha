@@ -2,6 +2,24 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import {
+  Code2,
+  Database,
+  Lock,
+  Cloud,
+  Zap,
+  Boxes,
+  GitBranch,
+  Palette,
+  BookOpen,
+  Network,
+  Flame,
+  Package,
+  RefreshCw,
+  Shield,
+  Monitor,
+  CircleDot,
+} from 'lucide-react'
 
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(false)
@@ -14,6 +32,33 @@ const useIsMobile = () => {
   }, [])
 
   return isMobile
+}
+
+const iconMap: Record<string, React.ReactNode> = {
+  'React & Next.js': <Code2 className="w-5 h-5" />,
+  'TypeScript': <Shield className="w-5 h-5" />,
+  'Tailwind CSS': <Palette className="w-5 h-5" />,
+  'Framer Motion': <Zap className="w-5 h-5" />,
+  'Zustand': <CircleDot className="w-5 h-5" />,
+  'WebSockets': <Network className="w-5 h-5" />,
+  'Node.js & Express': <Package className="w-5 h-5" />,
+  'REST & GraphQL': <Monitor className="w-5 h-5" />,
+  'Serverless Functions': <Cloud className="w-5 h-5" />,
+  'JWT Authentication': <Lock className="w-5 h-5" />,
+  'Microservices': <Boxes className="w-5 h-5" />,
+  'PostgreSQL & Prisma': <Database className="w-5 h-5" />,
+  'MongoDB & Mongoose': <Database className="w-5 h-5" />,
+  'Firebase': <Flame className="w-5 h-5" />,
+  'Redis': <Database className="w-5 h-5" />,
+  'Vercel': <Zap className="w-5 h-5" />,
+  'AWS Fundamentals': <Cloud className="w-5 h-5" />,
+  'Docker': <Package className="w-5 h-5" />,
+  'CI/CD Pipelines': <RefreshCw className="w-5 h-5" />,
+  'GitHub Actions': <GitBranch className="w-5 h-5" />,
+  'Figma Prototyping': <Palette className="w-5 h-5" />,
+  'Git Version Control': <GitBranch className="w-5 h-5" />,
+  'Notion': <BookOpen className="w-5 h-5" />,
+  'VS Code': <Code2 className="w-5 h-5" />,
 }
 
 const techStack = [
@@ -90,9 +135,12 @@ const TechStack = () => {
                 {cat.items.map((tech) => (
                   <motion.div
                     key={tech}
-                    whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.05)' }}
-                    className="px-4 py-2 rounded-xl border border-white/10 bg-transparent text-sm font-medium text-white/80 hover:text-white hover:border-white/20 transition-all cursor-default"
+                    whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.08)' }}
+                    className="px-4 py-2.5 rounded-lg border border-white/10 bg-white/5 text-sm font-medium text-white/80 hover:text-white hover:border-white/30 transition-all cursor-default flex items-center gap-2.5 hover:bg-white/10"
                   >
+                    <span className="text-white/60 group-hover:text-white/80 transition-colors">
+                      {iconMap[tech]}
+                    </span>
                     {tech}
                   </motion.div>
                 ))}
