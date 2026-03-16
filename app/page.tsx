@@ -8,6 +8,7 @@ import Trust from '@/components/Trust'
 import Projects from '@/components/Projects'
 import Experience from '@/components/Experience'
 import TechStack from '@/components/TechStack'
+import GitHubStats from '@/components/GitHubStats'
 import Testimonials from '@/components/Testimonials'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -17,6 +18,7 @@ export default function Home() {
     <main className="bg-bg-primary text-text-primary overflow-x-hidden">
       <Navbar />
       <Hero />
+      <GitHubStats />
       <About />
       <Experience />
       <Trust />

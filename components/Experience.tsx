@@ -87,7 +87,7 @@ const Experience = () => {
             <h2 className="text-3xl font-bold tracking-tight text-white mb-4">
               Experience & Impact
             </h2>
-            <p className="text-white/70 text-base font-light max-w-2xl leading-relaxed">
+            <p className="text-white/80 text-base font-light max-w-2xl leading-relaxed">
               A timeline of building ambitious products, architecting robust systems, and delivering measurable impact.
             </p>
           </div>
@@ -108,17 +108,17 @@ const Experience = () => {
                   <div className="flex flex-col gap-2 mb-4">
                     <div>
                       <h3 className="text-base font-medium tracking-tight text-white mb-0.5">{exp.role}</h3>
-                      <p className="text-white/70 text-sm font-medium">{exp.company}</p>
+                      <p className="text-white/80 text-sm font-medium">{exp.company}</p>
                     </div>
                     <div className="inline-flex self-start px-2.5 py-1 rounded-full border border-white/10 bg-white/5">
-                      <span className="text-xs font-medium text-white/70 whitespace-nowrap">{exp.period}</span>
+                      <span className="text-xs font-medium text-white/80 whitespace-nowrap">{exp.period}</span>
                     </div>
                   </div>
 
                   <ul className="space-y-2.5">
                     {exp.highlights.map((h, i) => (
-                      <li key={i} className="flex gap-3 text-xs text-white/70 font-light leading-relaxed">
-                        <span className="text-white/50 flex-shrink-0 mt-0.5">—</span>
+                      <li key={i} className="flex gap-3 text-xs text-white/80 font-light leading-relaxed">
+                        <span className="text-white/80 flex-shrink-0 mt-0.5">—</span>
                         {h}
                       </li>
                     ))}
