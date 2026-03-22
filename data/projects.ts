@@ -35,7 +35,7 @@ export const projectsData: Project[] = [
         shortDesc: 'B2B Marketplace Platform',
         fullDesc: 'A scalable marketplace connecting businesses with raw material suppliers in Bangladesh.',
         features: ['Supplier & product listing', 'Smart categorization algorithm', 'High-availability architecture'],
-        tech: ['Next.js', 'TypeScript', 'MongoDB', 'Node.js', 'Tailwind CSS'],
+        tech: ['Next.js', 'TypeScript', 'MongoDB', 'Node.js', 'Tailwind CSS', 'Cloudinary', 'GraphQL', 'Socket.io'],
         featured: true,
         coverImage: '/projects/shilpomarket/cover.png',
         galleryImages: [
@@ -71,7 +71,7 @@ export const projectsData: Project[] = [
         shortDesc: 'Software Agency Platform',
         fullDesc: 'Professional software agency terminal designed for high-conversion client acquisition.',
         features: ['Service catalog', 'Ultra-premium UX', 'Trust-driven conversion flow'],
-        tech: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+        tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'Cloudinary', 'three.js', 'Vercel'],
         featured: true,
         coverImage: '/projects/pqrix/cover.png',
         galleryImages: [
@@ -108,7 +108,7 @@ export const projectsData: Project[] = [
         shortDesc: 'Property Rental Engine',
         fullDesc: 'Modern property discovery platform with real-time filtering and user-centric interfaces.',
         features: ['Dynamic listing platform', 'Advanced search heuristics', 'Device-agnostic design'],
-        tech: ['React', 'Firebase', 'Express.js', 'Redux'],
+        tech: ['Next.js', 'MongoDB', 'Socket.io', 'Redux', 'OTP verification', 'Cloudinary'],
         featured: false,
         coverImage: '/projects/basha/cover.png',
         galleryImages: [
@@ -129,7 +129,7 @@ export const projectsData: Project[] = [
         },
         caseStudy: {
             challenge: 'Property seekers in urban areas face incredibly difficult discovery processes, dealing with fragmented Facebook groups, outdated classifieds, and a lack of verified information regarding property features and location specifics.',
-            solution: 'Developed a streamlined, user-focused property rental engine. The platform utilizes advanced state management via Redux and real-time database capabilities via Firebase to provide instant search and filtering. The backend infrastructure was built with Express.js to handle secure user authentication and property verification workflows.',
+            solution: 'Developed a streamlined, user-focused property rental engine. The platform utilizes advanced state management via Redux and real-time database capabilities via MongoDB to provide instant search and filtering. The backend infrastructure was built with Express.js to handle secure user authentication and property verification workflows.',
             outcomes: [
                 'Engineered real-time search filtering with zero-latency UX.',
                 'Implemented secure, authenticated data mutation pipelines.',

@@ -66,7 +66,7 @@ const Testimonials = () => {
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16 space-y-4">
           <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
-            07. Client Feedback
+            07. Feedback
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
             Trusted by Builders

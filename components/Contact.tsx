@@ -94,7 +94,7 @@ const Contact = () => {
             08. Communication
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
-            Initialize Contact
+            Contact
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto font-light text-lg">
             Have an ambitious project, a systemic challenge, or a venture in mind? Let&apos;s engineer the solution together.
@@ -139,7 +139,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="message" className="block text-xs font-medium tracking-wider text-white/80 uppercase mb-2">
-                  Message Payload
+                  Message 
                 </label>
                 <textarea
                   id="message"
@@ -159,7 +159,7 @@ const Contact = () => {
                 type="submit"
                 className="w-full px-6 py-4 rounded-xl font-medium tracking-wide bg-white text-black hover:bg-zinc-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
-                {submitted ? 'TRANSMISSION SENT ✓' : 'TRANSMIT MESSAGE'}
+                {submitted ? 'SENT ✓' : 'MESSAGE'}
               </motion.button>
             </form>
           </motion.div>

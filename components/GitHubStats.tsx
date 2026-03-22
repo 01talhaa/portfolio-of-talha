@@ -187,7 +187,8 @@ const GitHubStats = () => {
               </BarChart>
             </ResponsiveContainer>
             <p className="text-xs text-white/60 mt-4 text-center">
-              {Math.round(((697 - 1) / 1 - 1) * 100)}% growth from 2023 to 2026
+              {/* {Math.round(((697 - 1) / 1 - 1) * 100)}%  */}
+              growth from 2023 to 2026
             </p>
           </motion.div>
 
