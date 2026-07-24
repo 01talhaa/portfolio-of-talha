@@ -83,7 +83,7 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
           className="cursor-pointer"
           onClick={() => setSelectedIndex(0)}
         >
-          <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-white/10 bg-white/5 group">
+          <div className="relative w-full aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 group">
             <Image
               src={images[0]}
               alt={`${projectTitle} Cover`}
@@ -91,13 +91,13 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               priority
             />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+            <div className="absolute inset-0 bg-black/5 dark:bg-black/0 group-hover:bg-black/5 dark:bg-black/20 transition-colors flex items-center justify-center">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileHover={{ opacity: 1, scale: 1 }}
-                className="p-3 rounded-full bg-white/20 backdrop-blur"
+                className="p-3 rounded-full bg-black/20 dark:bg-white/20 backdrop-blur"
               >
-                <ZoomIn size={24} className="text-white" />
+                <ZoomIn size={24} className="text-zinc-900 dark:text-white" />
               </motion.div>
             </div>
           </div>
@@ -114,20 +114,20 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
                 className="cursor-pointer"
                 onClick={() => setSelectedIndex(idx + 1)}
               >
-                <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-white/5 group">
+                <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 group">
                   <Image
                     src={img}
                     alt={`${projectTitle} Gallery Image ${idx + 2}`}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/5 dark:bg-black/0 group-hover:bg-black/5 dark:bg-black/20 transition-colors flex items-center justify-center">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileHover={{ opacity: 1, scale: 1 }}
-                      className="p-3 rounded-full bg-white/20 backdrop-blur"
+                      className="p-3 rounded-full bg-black/20 dark:bg-white/20 backdrop-blur"
                     >
-                      <ZoomIn size={20} className="text-white" />
+                      <ZoomIn size={20} className="text-zinc-900 dark:text-white" />
                     </motion.div>
                   </div>
                 </div>
@@ -145,7 +145,7 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
+            className="fixed inset-0 z-[100] bg-black/5 dark:bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"
             onClick={() => {
               setSelectedIndex(null)
               setZoom(100)
@@ -161,17 +161,17 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
                 setSelectedIndex(null)
                 setZoom(100)
               }}
-              className="absolute top-4 sm:top-8 right-4 sm:right-8 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-[110] group"
+              className="absolute top-4 sm:top-8 right-4 sm:right-8 p-2 sm:p-3 rounded-full bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:bg-white/20 transition-colors z-[110] group"
               aria-label="Close gallery"
             >
-              <X size={24} className="text-white group-hover:scale-110 transition-transform" />
+              <X size={24} className="text-zinc-900 dark:text-white group-hover:scale-110 transition-transform" />
             </motion.button>
 
             {/* Image Counter */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="absolute top-4 sm:top-8 left-4 sm:left-8 px-4 py-2 rounded-full bg-white/10 backdrop-blur text-sm font-medium text-white"
+              className="absolute top-4 sm:top-8 left-4 sm:left-8 px-4 py-2 rounded-full bg-black/10 dark:bg-white/10 backdrop-blur text-sm font-medium text-zinc-900 dark:text-white"
             >
               {selectedIndex + 1} / {images.length}
             </motion.div>
@@ -214,19 +214,19 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="flex gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/20"
+                className="flex gap-2 px-4 py-2 rounded-full bg-black/10 dark:bg-white/10 backdrop-blur border border-black/20 dark:border-white/20"
               >
                 <button
                   onClick={(e) => {
                     e.stopPropagation()
                     handleZoomOut()
                   }}
-                  className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                  className="p-2 hover:bg-black/20 dark:bg-white/20 rounded-lg transition-colors"
                   aria-label="Zoom out"
                 >
-                  <ZoomOut size={20} className="text-white" />
+                  <ZoomOut size={20} className="text-zinc-900 dark:text-white" />
                 </button>
-                <div className="flex items-center px-3 text-sm font-medium text-white min-w-[50px] text-center">
+                <div className="flex items-center px-3 text-sm font-medium text-zinc-900 dark:text-white min-w-[50px] text-center">
                   {zoom}%
                 </div>
                 <button
@@ -234,10 +234,10 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
                     e.stopPropagation()
                     handleZoomIn()
                   }}
-                  className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                  className="p-2 hover:bg-black/20 dark:bg-white/20 rounded-lg transition-colors"
                   aria-label="Zoom in"
                 >
-                  <ZoomIn size={20} className="text-white" />
+                  <ZoomIn size={20} className="text-zinc-900 dark:text-white" />
                 </button>
               </motion.div>
 
@@ -253,20 +253,20 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
                     e.stopPropagation()
                     handlePrev()
                   }}
-                  className="p-2 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-colors group"
+                  className="p-2 sm:p-3 rounded-full bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:bg-white/20 border border-black/20 dark:border-white/20 transition-colors group"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft size={24} className="text-white group-hover:scale-110 transition-transform" />
+                  <ChevronLeft size={24} className="text-zinc-900 dark:text-white group-hover:scale-110 transition-transform" />
                 </button>
                 <button
                   onClick={(e) => {
                     e.stopPropagation()
                     handleNext()
                   }}
-                  className="p-2 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-colors group"
+                  className="p-2 sm:p-3 rounded-full bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:bg-white/20 border border-black/20 dark:border-white/20 transition-colors group"
                   aria-label="Next image"
                 >
-                  <ChevronRight size={24} className="text-white group-hover:scale-110 transition-transform" />
+                  <ChevronRight size={24} className="text-zinc-900 dark:text-white group-hover:scale-110 transition-transform" />
                 </button>
               </motion.div>
             </div>
@@ -276,7 +276,7 @@ export default function ProjectGallery({ images, projectTitle }: ProjectGalleryP
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 text-xs text-zinc-400 pointer-events-none px-3 py-1.5 rounded-lg bg-white/5 backdrop-blur border border-white/10 hidden sm:block"
+              className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 text-xs text-zinc-800 dark:text-zinc-100 pointer-events-none px-3 py-1.5 rounded-lg bg-black/5 dark:bg-white/5 backdrop-blur border border-black/10 dark:border-white/10 hidden sm:block"
             >
               ← → to navigate • Scroll to zoom • ESC to close
             </motion.div>

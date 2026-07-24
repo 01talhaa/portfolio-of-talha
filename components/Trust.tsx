@@ -109,9 +109,9 @@ const Trust = () => {
   }
 
   return (
-    <section id="trust" className="relative py-24 px-6 sm:px-8 bg-black overflow-hidden border-t border-white/5">
+    <section id="trust" className="relative py-24 px-6 sm:px-8 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-white rounded-[100%] blur-[120px] opacity-[0.02]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-zinc-900 dark:bg-white rounded-[100%] blur-[120px] opacity-[0.02]"></div>
       </div>
 
       <motion.div
@@ -123,13 +123,13 @@ const Trust = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+          <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
             03. Credibility
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
             Developer Expertise
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto text-lg font-light leading-relaxed">
+          <p className="text-zinc-900 dark:text-white/95 max-w-2xl mx-auto text-lg font-light leading-relaxed">
             Track record of building scalable systems, solving complex technical challenges, and delivering production-grade results.
           </p>
         </motion.div>
@@ -143,24 +143,24 @@ const Trust = () => {
                 key={idx}
                 variants={itemVariants}
                 whileHover={{ y: -2, backgroundColor: 'rgba(255,255,255,0.03)' }}
-                className="p-8 rounded-3xl border border-white/5 bg-transparent transition-all duration-300 group flex items-start gap-6"
+                className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-transparent transition-all duration-300 group flex items-start gap-6"
               >
                 {/* Icon */}
-                <div className="w-12 h-12 shrink-0 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-colors duration-300">
-                  <Icon className="text-white/80 group-hover:text-black transition-colors" size={20} />
+                <div className="w-12 h-12 shrink-0 rounded-2xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 flex items-center justify-center group-hover:bg-zinc-900 dark:hover:bg-white group-hover:border-white transition-colors duration-300">
+                  <Icon className="text-zinc-900 dark:text-white/95 group-hover:text-zinc-50 dark:hover:text-black transition-colors" size={20} />
                 </div>
 
                 {/* Content */}
                 <div>
                   <div className="mb-2">
-                    <span className="text-[10px] font-medium text-white/80 uppercase tracking-widest">
+                    <span className="text-[10px] font-medium text-zinc-900 dark:text-white/95 uppercase tracking-widest">
                       {achievement.category}
                     </span>
                   </div>
-                  <h3 className="text-lg font-medium tracking-tight text-white mb-2">
+                  <h3 className="text-lg font-medium tracking-tight text-zinc-900 dark:text-white mb-2">
                     {achievement.title}
                   </h3>
-                  <p className="text-sm text-white/80 font-light leading-relaxed">
+                  <p className="text-sm text-zinc-900 dark:text-white/95 font-light leading-relaxed">
                     {achievement.description}
                   </p>
                 </div>
@@ -170,15 +170,15 @@ const Trust = () => {
         </div>
 
         {/* Engineering Section */}
-        <motion.div variants={itemVariants} className="mt-24 pt-24 border-t border-white/5">
+        <motion.div variants={itemVariants} className="mt-24 pt-24 border-t border-black/5 dark:border-white/5">
           <div className="text-center mb-16 space-y-4">
-            <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+            <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
               Technical Depth
             </span>
-            <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+            <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white">
               Engineering Solutions
             </h3>
-            <p className="text-white/80 max-w-2xl mx-auto text-base font-light leading-relaxed">
+            <p className="text-zinc-900 dark:text-white/95 max-w-2xl mx-auto text-base font-light leading-relaxed">
               Real-world problems solved with modern tech stack and architectural best practices.
             </p>
           </div>
@@ -189,19 +189,19 @@ const Trust = () => {
                 key={idx}
                 variants={itemVariants}
                 whileHover={{ y: -2, backgroundColor: 'rgba(255,255,255,0.03)' }}
-                className="p-8 rounded-3xl border border-white/5 bg-transparent transition-all duration-300"
+                className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-transparent transition-all duration-300"
               >
-                <h4 className="text-lg font-medium tracking-tight text-white mb-3">
+                <h4 className="text-lg font-medium tracking-tight text-zinc-900 dark:text-white mb-3">
                   {problem.title}
                 </h4>
-                <p className="text-sm text-white/80 font-light leading-relaxed mb-6">
+                <p className="text-sm text-zinc-900 dark:text-white/95 font-light leading-relaxed mb-6">
                   {problem.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {problem.technologies.map((tech, techIdx) => (
                     <span
                       key={techIdx}
-                      className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium text-white/70 hover:text-white hover:border-white/30 transition-colors"
+                      className="px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-[11px] font-medium text-zinc-900 dark:text-white/70 hover:text-zinc-900 dark:hover:text-white hover:border-black/30 dark:border-white/30 transition-colors"
                     >
                       {tech}
                     </span>

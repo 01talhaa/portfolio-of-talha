@@ -101,7 +101,7 @@ const TechStack = () => {
   }
 
   return (
-    <section id="tech" className="relative py-24 px-6 sm:px-8 bg-black overflow-hidden border-t border-white/5">
+    <section id="tech" className="relative py-24 px-6 sm:px-8 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
       <motion.div
         className="max-w-6xl mx-auto z-10 relative"
         variants={containerVariants}
@@ -111,13 +111,13 @@ const TechStack = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-20 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+          <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
             06. Engineering Arsenal
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
             Technology Stack
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto font-light text-lg">
+          <p className="text-zinc-900 dark:text-white/95 max-w-2xl mx-auto font-light text-lg">
             A comprehensive overview of the sophisticated tooling utilized to engineer reliable, hyper-scalable, and performant architectures.
           </p>
         </motion.div>
@@ -127,18 +127,18 @@ const TechStack = () => {
           {techStack.map((cat, idx) => (
             <motion.div key={idx} variants={itemVariants} className="space-y-6">
               <div className="flex items-center gap-4">
-                <span className="text-xs font-mono text-white/80">0{idx + 1}</span>
-                <h3 className="text-lg font-medium tracking-tight text-white">{cat.category}</h3>
-                <div className="h-px flex-grow bg-white/5"></div>
+                <span className="text-xs font-mono text-zinc-900 dark:text-white/95">0{idx + 1}</span>
+                <h3 className="text-lg font-medium tracking-tight text-zinc-900 dark:text-white">{cat.category}</h3>
+                <div className="h-px flex-grow bg-black/5 dark:bg-white/5"></div>
               </div>
               <div className="flex flex-wrap gap-3">
                 {cat.items.map((tech) => (
                   <motion.div
                     key={tech}
                     whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.08)' }}
-                    className="px-4 py-2.5 rounded-lg border border-white/10 bg-white/5 text-sm font-medium text-white/80 hover:text-white hover:border-white/30 transition-all cursor-default flex items-center gap-2.5 hover:bg-white/10"
+                    className="px-4 py-2.5 rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 text-sm font-medium text-zinc-900 dark:text-white/95 hover:text-zinc-900 dark:hover:text-white hover:border-black/30 dark:border-white/30 transition-all cursor-default flex items-center gap-2.5 hover:bg-black/10 dark:bg-white/10"
                   >
-                    <span className="text-white/60 group-hover:text-white/80 transition-colors">
+                    <span className="text-zinc-900 dark:text-white/60 group-hover:text-zinc-900 dark:hover:text-white/80 transition-colors">
                       {iconMap[tech]}
                     </span>
                     {tech}

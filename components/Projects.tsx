@@ -37,7 +37,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="relative py-32 px-6 sm:px-8 bg-black overflow-hidden border-t border-white/5">
+    <section id="projects" className="relative py-32 px-6 sm:px-8 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
       <motion.div
         className="max-w-7xl mx-auto z-10 relative"
         variants={containerVariants}
@@ -47,13 +47,13 @@ const Projects = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="mb-24 space-y-6">
-          <span className="text-xs font-medium tracking-[0.2em] text-white/80 uppercase">
+          <span className="text-xs font-medium tracking-[0.2em] text-zinc-900 dark:text-white/95 uppercase">
             05. Featured Work
           </span>
-          <h2 className="text-5xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+          <h2 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-900 dark:text-white leading-tight">
             Selected Projects
           </h2>
-          <p className="text-lg text-white/80 font-light max-w-2xl">
+          <p className="text-lg text-zinc-900 dark:text-white/95 font-light max-w-2xl">
             Curated selection of engineering and product work built with precision.
           </p>
         </motion.div>
@@ -93,10 +93,10 @@ const Projects = () => {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 backdrop-blur"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black/20 dark:border-white/20 bg-black/5 dark:bg-white/5 backdrop-blur"
                   >
-                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                    <span className="text-xs font-medium text-white tracking-wide uppercase">Featured</span>
+                    <span className="w-2 h-2 rounded-full bg-zinc-900 dark:bg-white animate-pulse" />
+                    <span className="text-xs font-medium text-zinc-900 dark:text-white tracking-wide uppercase">Featured</span>
                   </motion.div>
                 )}
 
@@ -104,7 +104,7 @@ const Projects = () => {
                 <Link href={`/projects/${project.slug}`}>
                   <motion.h3
                     whileHover={{ x: 4 }}
-                    className="text-3xl sm:text-4xl font-bold tracking-tight text-white transition-colors hover:text-white/80 cursor-pointer"
+                    className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white transition-colors hover:text-zinc-900 dark:hover:text-white/80 cursor-pointer"
                   >
                     {project.title}
                   </motion.h3>
@@ -112,10 +112,10 @@ const Projects = () => {
 
                 {/* Descriptions */}
                 <div className="space-y-3">
-                  <p className="text-base font-medium text-white/80 tracking-wide">
+                  <p className="text-base font-medium text-zinc-900 dark:text-white/95 tracking-wide">
                     {project.shortDesc}
                   </p>
-                  <p className="text-base text-white/80 font-light leading-relaxed max-w-2xl">
+                  <p className="text-base text-zinc-900 dark:text-white/95 font-light leading-relaxed max-w-2xl">
                     {project.fullDesc}
                   </p>
                 </div>
@@ -126,13 +126,13 @@ const Projects = () => {
                     <motion.span
                       key={t}
                       whileHover={{ y: -2 }}
-                      className="px-3 py-1.5 rounded-lg text-xs font-medium border border-white/15 text-white/80 bg-white/5 hover:bg-white/10 transition-colors"
+                      className="px-3 py-1.5 rounded-lg text-xs font-medium border border-black/15 dark:border-white/15 text-zinc-900 dark:text-white/95 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:bg-white/10 transition-colors"
                     >
                       {t}
                     </motion.span>
                   ))}
                   {project.tech.length > 6 && (
-                    <span className="px-3 py-1.5 rounded-lg text-xs font-medium text-white/80">
+                    <span className="px-3 py-1.5 rounded-lg text-xs font-medium text-zinc-900 dark:text-white/95">
                       +{project.tech.length - 6}
                     </span>
                   )}
@@ -144,7 +144,7 @@ const Projects = () => {
                     <motion.button
                       whileHover={{ x: 6 }}
                       whileTap={{ x: 2 }}
-                      className="text-white font-medium text-sm flex items-center gap-2.5 group/btn"
+                      className="text-zinc-900 dark:text-white font-medium text-sm flex items-center gap-2.5 group/btn"
                     >
                       View Details
                       <motion.div>
@@ -161,7 +161,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
-                        className="p-2.5 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors"
+                        className="p-2.5 rounded-lg border border-black/20 dark:border-white/20 text-zinc-900 dark:text-white hover:bg-black/10 dark:bg-white/10 transition-colors"
                         aria-label="View Live"
                       >
                         <ExternalLink size={18} />
@@ -174,7 +174,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
-                        className="p-2.5 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors"
+                        className="p-2.5 rounded-lg border border-black/20 dark:border-white/20 text-zinc-900 dark:text-white hover:bg-black/10 dark:bg-white/10 transition-colors"
                         aria-label="View Code"
                       >
                         <Github size={18} />

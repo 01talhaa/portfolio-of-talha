@@ -55,7 +55,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section id="testimonials" className="relative py-24 px-6 sm:px-8 bg-black overflow-hidden border-t border-white/5">
+    <section id="testimonials" className="relative py-24 px-6 sm:px-8 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
       <motion.div
         className="max-w-6xl mx-auto z-10 relative"
         variants={containerVariants}
@@ -65,13 +65,13 @@ const Testimonials = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+          <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
             07. Feedback
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
             Trusted by Builders
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto font-light text-lg">
+          <p className="text-zinc-900 dark:text-white/95 max-w-2xl mx-auto font-light text-lg">
             Direct perspectives from founders, engineering leads, and stakeholders I&apos;ve had the privilege to collaborate with.
           </p>
         </motion.div>
@@ -83,30 +83,30 @@ const Testimonials = () => {
               key={idx}
               variants={itemVariants}
               whileHover={{ y: -4, backgroundColor: 'rgba(255,255,255,0.03)' }}
-              className="p-8 rounded-3xl border border-white/10 bg-white/[0.02] transition-colors duration-300 flex flex-col justify-between"
+              className="p-8 rounded-3xl border border-black/10 dark:border-white/10 bg-white/[0.02] transition-colors duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Stars */}
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} className="fill-white text-white opacity-80" />
+                    <Star key={i} size={14} className="fill-white text-zinc-900 dark:text-white opacity-80" />
                   ))}
                 </div>
 
                 {/* Quote */}
-                <p className="text-white/80 mb-8 leading-relaxed font-light text-sm tracking-wide">
+                <p className="text-zinc-900 dark:text-white/95 mb-8 leading-relaxed font-light text-sm tracking-wide">
                   &quot;{t.quote}&quot;
                 </p>
               </div>
 
               {/* Author */}
-              <div className="flex items-center gap-4 pt-6 border-t border-white/10 mt-auto">
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white font-medium text-sm">
+              <div className="flex items-center gap-4 pt-6 border-t border-black/10 dark:border-white/10 mt-auto">
+                <div className="w-10 h-10 rounded-full bg-black/10 dark:bg-white/10 flex items-center justify-center text-zinc-900 dark:text-white font-medium text-sm">
                   {t.author.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-medium text-white text-sm">{t.author}</p>
-                  <p className="text-xs text-white/80">{t.role} <span className="text-white/80 mx-1">•</span> {t.company}</p>
+                  <p className="font-medium text-zinc-900 dark:text-white text-sm">{t.author}</p>
+                  <p className="text-xs text-zinc-900 dark:text-white/95">{t.role} <span className="text-zinc-900 dark:text-white/95 mx-1">•</span> {t.company}</p>
                 </div>
               </div>
             </motion.div>

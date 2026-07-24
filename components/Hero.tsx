@@ -43,9 +43,9 @@ const Hero = () => {
   }
 
   return (
-    <section id="hero" className="relative min-h-screen pt-28 pb-20 px-6 sm:px-8 overflow-hidden flex items-center bg-black">
+    <section id="hero" className="relative min-h-screen pt-28 pb-20 px-6 sm:px-8 overflow-hidden flex items-center bg-zinc-50 dark:bg-black">
       {/* Premium minimal background glows */}
-      <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-white rounded-full blur-[120px] opacity-[0.03] pointer-events-none"></div>
+      <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-zinc-900 dark:bg-white rounded-full blur-[120px] opacity-[0.03] pointer-events-none"></div>
       <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-zinc-400 rounded-full blur-[100px] opacity-[0.03] pointer-events-none"></div>
 
       <motion.div
@@ -61,7 +61,7 @@ const Hero = () => {
             <motion.div
               layoutId="hero-avatar"
               onClick={() => setIsAvatarExpanded(true)}
-              className="relative w-[100px] h-[100px] sm:w-20 sm:h-20 rounded-full overflow-hidden border border-white/10 shadow-[0_0_30px_rgba(255,255,255,0.05)] shrink-0 cursor-pointer group"
+              className="relative w-[100px] h-[100px] sm:w-20 sm:h-20 rounded-full overflow-hidden border border-black/10 dark:border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.05)] dark:shadow-[0_0_30px_rgba(255,255,255,0.05)] shrink-0 cursor-pointer group"
             >
               <Image
                 src="/profile.png"
@@ -70,15 +70,15 @@ const Hero = () => {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 priority
               />
-              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-full" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-black/10 dark:ring-white/10 rounded-full" />
             </motion.div>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 backdrop-blur-md">
               <motion.div
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="w-2 h-2 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+                className="w-2 h-2 rounded-full bg-zinc-900 dark:bg-white shadow-[0_0_10px_rgba(0,0,0,0.8)] dark:shadow-[0_0_10px_rgba(255,255,255,0.8)]"
               />
-              <span className="text-[11px] font-medium text-zinc-300 tracking-wide uppercase">
+              <span className="text-[11px] font-medium text-zinc-800 dark:text-zinc-100 tracking-wide uppercase">
                 Available for opportunities
               </span>
             </div>
@@ -86,7 +86,7 @@ const Hero = () => {
 
           {/* Headline */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter text-white">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter text-zinc-900 dark:text-white">
               Building products that
               <br />
               <span className="gradient-text">
@@ -95,7 +95,7 @@ const Hero = () => {
               <br />
               and solve problems.
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed max-w-xl font-light">
+            <p className="text-lg text-zinc-900 dark:text-white/95 leading-relaxed max-w-xl font-light">
               Full-stack developer who builds scalable systems, optimized backends, and pixel-perfect frontends. I specialize in solving complex engineering problems with modern tech.
             </p>
           </motion.div>
@@ -113,10 +113,10 @@ const Hero = () => {
               <motion.div
                 key={idx}
                 whileHover={{ y: -4, backgroundColor: 'rgba(255,255,255,0.08)' }}
-                className="p-4 rounded-2xl border border-white/5 bg-white/[0.02] transition-colors flex flex-col items-center sm:items-start text-center sm:text-left"
+                className="p-4 rounded-2xl border border-black/5 dark:border-white/5 bg-white/[0.02] transition-colors flex flex-col items-center sm:items-start text-center sm:text-left"
               >
-                <div className="text-2xl mb-2 text-zinc-500">{badge.icon}</div>
-                <div className="text-xs font-medium text-zinc-300">
+                <div className="text-2xl mb-2 text-zinc-700">{badge.icon}</div>
+                <div className="text-xs font-medium text-zinc-800 dark:text-zinc-100">
                   {badge.label}
                 </div>
               </motion.div>
@@ -133,7 +133,7 @@ const Hero = () => {
                 href="#projects"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-3.5 rounded-full bg-white text-black font-medium flex items-center gap-2 hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all"
+                className="px-8 py-3.5 rounded-full bg-zinc-900 dark:bg-white text-zinc-50 dark:text-black font-medium flex items-center gap-2 hover:bg-zinc-200 hover:shadow-[0_0_20px_rgba(0,0,0,0.2)] dark:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all"
               >
                 View Projects <ArrowRight size={16} />
               </motion.a>
@@ -142,7 +142,7 @@ const Hero = () => {
                 href="#contact"
                 whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.05)' }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-3.5 rounded-full border border-white/10 text-white font-medium transition-colors"
+                className="px-8 py-3.5 rounded-full border border-black/10 dark:border-white/10 text-zinc-900 dark:text-white font-medium transition-colors"
               >
                 Contact Me
               </motion.a>
@@ -150,14 +150,14 @@ const Hero = () => {
             
             {/* Social Links - Mobile/Tablet */}
             <div className="flex items-center gap-2 justify-center lg:hidden">
-              <span className="text-xs text-zinc-500 font-medium tracking-wide mr-2">Follow</span>
+              <span className="text-xs text-zinc-700 font-medium tracking-wide mr-2">Follow</span>
               <motion.a
                 href="https://github.com/01talhaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, backgroundColor: 'rgba(255,255,255,0.12)' }}
                 whileTap={{ scale: 0.9 }}
-                className="p-2.5 rounded-full border border-white/20 text-white hover:border-white/40 transition-all"
+                className="p-2.5 rounded-full border border-black/20 dark:border-white/20 text-zinc-900 dark:text-white hover:border-black/40 dark:border-white/40 transition-all"
                 aria-label="GitHub"
               >
                 <Github size={18} />
@@ -168,7 +168,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.15, backgroundColor: 'rgba(255,255,255,0.12)' }}
                 whileTap={{ scale: 0.9 }}
-                className="p-2.5 rounded-full border border-white/20 text-white hover:border-white/40 transition-all"
+                className="p-2.5 rounded-full border border-black/20 dark:border-white/20 text-zinc-900 dark:text-white hover:border-black/40 dark:border-white/40 transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
@@ -185,28 +185,28 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, -15, 0], rotateX: [0, 2, 0], rotateY: [0, -2, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute inset-0 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-xl overflow-hidden shadow-2xl shadow-black/50"
+                className="absolute inset-0 rounded-[2rem] border border-black/10 dark:border-white/10 bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-xl overflow-hidden shadow-2xl shadow-black/50"
               >
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.05),transparent_50%)]" />
 
                 <div className="relative h-full flex flex-col items-center justify-center p-8 space-y-8">
-                  <div className="w-20 h-20 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center shadow-inner">
-                    <div className="w-10 h-10 border-t-2 border-r-2 border-white/50 rounded-tr-lg animate-[spin_4s_linear_infinite]" />
-                    <div className="absolute w-2 h-2 bg-white rounded-full shadow-[0_0_10px_white]" />
+                  <div className="w-20 h-20 rounded-2xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 flex items-center justify-center shadow-inner">
+                    <div className="w-10 h-10 border-t-2 border-r-2 border-black/50 dark:border-white/50 rounded-tr-lg animate-[spin_4s_linear_infinite]" />
+                    <div className="absolute w-2 h-2 bg-zinc-900 dark:bg-white rounded-full shadow-[0_0_10px_white]" />
                   </div>
 
                   <div className="text-center space-y-2">
-                    <div className="inline-flex items-center gap-2 px-2 py-1 rounded bg-white/5 border border-white/10">
+                    <div className="inline-flex items-center gap-2 px-2 py-1 rounded bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10">
                       <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                      <p className="text-[10px] text-zinc-400 font-mono">SYSTEM_ONLINE</p>
+                      <p className="text-[10px] text-zinc-800 dark:text-zinc-100 font-mono">SYSTEM_ONLINE</p>
                     </div>
-                    <p className="text-xl font-medium tracking-tight text-white">Full-Stack Architecture</p>
+                    <p className="text-xl font-medium tracking-tight text-zinc-900 dark:text-white">Full-Stack Architecture</p>
                   </div>
 
                   <div className="w-full flex flex-wrap justify-center gap-2">
                     {['Next.js', 'React', 'Node.js', 'TypeScript', 'Tailwind', 'PostgreSQL'].map((tech) => (
-                      <div key={tech} className="px-3 py-1.5 rounded-full bg-transparent border border-white/10 text-[11px] font-medium text-zinc-400">
+                      <div key={tech} className="px-3 py-1.5 rounded-full bg-transparent border border-black/10 dark:border-white/10 text-[11px] font-medium text-zinc-800 dark:text-zinc-100">
                         {tech}
                       </div>
                     ))}
@@ -218,20 +218,20 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, 10, 0], opacity: [0.5, 0.8, 0.5] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-4 -left-8 px-4 py-2 rounded-xl border border-white/5 bg-black/50 backdrop-blur-md"
+                className="absolute -top-4 -left-8 px-4 py-2 rounded-xl border border-black/5 dark:border-white/5 bg-black/5 dark:bg-black/50 backdrop-blur-md"
               >
-                <div className="text-[10px] text-zinc-500 font-mono mb-1">LOCATION</div>
-                <div className="text-xs font-medium text-zinc-300">Dhaka, BD</div>
+                <div className="text-[10px] text-zinc-700 font-mono mb-1">LOCATION</div>
+                <div className="text-xs font-medium text-zinc-800 dark:text-zinc-100">Dhaka, BD</div>
               </motion.div>
 
               <motion.div
                 animate={{ y: [0, -10, 0], opacity: [0.5, 0.8, 0.5] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -bottom-8 right-0 px-4 py-2 rounded-xl border border-white/5 bg-black/50 backdrop-blur-md"
+                className="absolute -bottom-8 right-0 px-4 py-2 rounded-xl border border-black/5 dark:border-white/5 bg-black/5 dark:bg-black/50 backdrop-blur-md"
               >
-                <div className="text-[10px] text-zinc-500 font-mono mb-1">STATUS</div>
-                <div className="text-xs font-medium text-white flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
+                <div className="text-[10px] text-zinc-700 font-mono mb-1">STATUS</div>
+                <div className="text-xs font-medium text-zinc-900 dark:text-white flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-zinc-900 dark:bg-white"></span>
                   Deploying
                 </div>
               </motion.div>
@@ -255,7 +255,7 @@ const Hero = () => {
                   boxShadow: '0_0_20px_rgba(255,255,255,0.2)'
                 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-3 rounded-full border border-white/20 text-white hover:border-white/50 transition-all duration-300 flex-shrink-0"
+                className="p-3 rounded-full border border-black/20 dark:border-white/20 text-zinc-900 dark:text-white hover:border-black/50 dark:border-white/50 transition-all duration-300 flex-shrink-0"
                 aria-label="GitHub"
               >
                 <Github size={20} />
@@ -270,7 +270,7 @@ const Hero = () => {
                   boxShadow: '0_0_20px_rgba(255,255,255,0.2)'
                 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-3 rounded-full border border-white/20 text-white hover:border-white/50 transition-all duration-300 flex-shrink-0"
+                className="p-3 rounded-full border border-black/20 dark:border-white/20 text-zinc-900 dark:text-white hover:border-black/50 dark:border-white/50 transition-all duration-300 flex-shrink-0"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -289,11 +289,11 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4 sm:p-8"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/5 dark:bg-black/80 backdrop-blur-xl p-4 sm:p-8"
             onClick={() => setIsAvatarExpanded(false)}
           >
             <button
-              className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors z-[101]"
+              className="absolute top-6 right-6 p-2 rounded-full bg-black/10 dark:bg-white/10 hover:bg-black/20 dark:bg-white/20 text-zinc-900 dark:text-white transition-colors z-[101]"
               onClick={(e) => {
                 e.stopPropagation()
                 setIsAvatarExpanded(false)
@@ -304,7 +304,7 @@ const Hero = () => {
             </button>
             <motion.div
               layoutId="hero-avatar"
-              className="relative w-full max-w-[280px] sm:max-w-md md:max-w-xl aspect-square rounded-[2rem] sm:rounded-[3rem] overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(255,255,255,0.1)] cursor-default"
+              className="relative w-full max-w-[280px] sm:max-w-md md:max-w-xl aspect-square rounded-[2rem] sm:rounded-[3rem] overflow-hidden border border-black/10 dark:border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.1)] dark:shadow-[0_0_100px_rgba(255,255,255,0.1)] cursor-default"
               onClick={(e) => e.stopPropagation()}
             >
               <Image

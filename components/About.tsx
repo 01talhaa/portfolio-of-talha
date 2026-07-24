@@ -40,7 +40,7 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="relative py-24 px-6 sm:px-8 bg-black overflow-hidden border-t border-white/5">
+    <section id="about" className="relative py-24 px-6 sm:px-8 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
       <motion.div
         className="max-w-7xl mx-auto"
         variants={containerVariants}
@@ -52,15 +52,15 @@ const About = () => {
           {/* Header & Text */}
           <motion.div variants={itemVariants} className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
-              <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+              <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
                 01. About Me
               </span>
-              <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6">
                 Engineering reliable systems.
               </h2>
             </div>
 
-            <div className="space-y-6 text-white/80 font-light leading-relaxed">
+            <div className="space-y-6 text-zinc-900 dark:text-white/95 font-light leading-relaxed">
               <p>
                 Computer Engineering student from Bangladesh with deep expertise in full-stack development. I focus on building systems that are fast, reliable, and maintainable.
               </p>
@@ -77,14 +77,14 @@ const About = () => {
                 key={idx}
                 variants={itemVariants}
                 whileHover={{ y: -4, backgroundColor: 'rgba(255,255,255,0.03)' }}
-                className="p-8 rounded-3xl border border-white/5 bg-transparent transition-colors group flex flex-col justify-between"
+                className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-transparent transition-colors group flex flex-col justify-between"
               >
-                <div className="text-2xl text-zinc-600 group-hover:text-white transition-colors mb-8">
+                <div className="text-2xl text-zinc-800 group-hover:text-zinc-900 dark:hover:text-white transition-colors mb-8">
                   {h.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium tracking-tight text-white mb-2">{h.title}</h3>
-                  <p className="text-sm text-white/80 font-light leading-relaxed">{h.description}</p>
+                  <h3 className="text-lg font-medium tracking-tight text-zinc-900 dark:text-white mb-2">{h.title}</h3>
+                  <p className="text-sm text-zinc-900 dark:text-white/95 font-light leading-relaxed">{h.description}</p>
                 </div>
               </motion.div>
             ))}

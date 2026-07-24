@@ -98,7 +98,7 @@ const GitHubStats = () => {
   }
 
   return (
-    <section id="github" className="relative py-24 px-6 sm:px-8 bg-black overflow-hidden border-t border-white/5">
+    <section id="github" className="relative py-24 px-6 sm:px-8 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 right-1/4 w-[600px] h-[600px] bg-green-500 rounded-full blur-[150px] opacity-[0.02]"></div>
       </div>
@@ -112,13 +112,13 @@ const GitHubStats = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="mb-16 space-y-4">
-          {/* <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+          {/* <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
             07. GitHub Activity
           </span> */}
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6">
             Code Contribution Analytics
           </h2>
-          <p className="text-white/80 text-lg font-light max-w-2xl leading-relaxed">
+          <p className="text-zinc-900 dark:text-white/95 text-lg font-light max-w-2xl leading-relaxed">
             A detailed breakdown of GitHub activity, contributions, and development patterns. Shipping code consistently, every single day.
           </p>
         </motion.div>
@@ -137,18 +137,18 @@ const GitHubStats = () => {
                 className={`p-6 rounded-3xl border ${stat.borderColor} bg-gradient-to-br ${stat.color} transition-all duration-300`}
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="p-2 rounded-lg bg-white/5">
-                    <Icon className="w-5 h-5 text-white/80" />
+                  <div className="p-2 rounded-lg bg-black/5 dark:bg-white/5">
+                    <Icon className="w-5 h-5 text-zinc-900 dark:text-white/95" />
                   </div>
-                  <div className="text-xs font-medium px-2 py-1 rounded-full bg-white/10 text-white/70">
+                  <div className="text-xs font-medium px-2 py-1 rounded-full bg-black/10 dark:bg-white/10 text-zinc-900 dark:text-white/70">
                     Live
                   </div>
                 </div>
                 <div className="mb-2">
-                  <h3 className="text-3xl font-bold text-white mb-1">{stat.value}</h3>
-                  <p className="text-sm text-white/80 font-light">{stat.label}</p>
+                  <h3 className="text-3xl font-bold text-zinc-900 dark:text-white mb-1">{stat.value}</h3>
+                  <p className="text-sm text-zinc-900 dark:text-white/95 font-light">{stat.label}</p>
                 </div>
-                <p className="text-xs text-white/60">{stat.description}</p>
+                <p className="text-xs text-zinc-900 dark:text-white/60">{stat.description}</p>
               </motion.div>
             )
           })}
@@ -159,9 +159,9 @@ const GitHubStats = () => {
           {/* Contributions by Year */}
           <motion.div
             variants={itemVariants}
-            className="p-8 rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-sm"
+            className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/[0.02] backdrop-blur-sm"
           >
-            <h3 className="text-xl font-medium text-white mb-4 flex items-center gap-2">
+            <h3 className="text-xl font-medium text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
               <GitCommit className="w-5 h-5 text-green-400" />
               Annual Contributions
             </h3>
@@ -186,7 +186,7 @@ const GitHubStats = () => {
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
-            <p className="text-xs text-white/60 mt-4 text-center">
+            <p className="text-xs text-zinc-900 dark:text-white/60 mt-4 text-center">
               {/* {Math.round(((697 - 1) / 1 - 1) * 100)}%  */}
               growth from 2023 to 2026
             </p>
@@ -195,9 +195,9 @@ const GitHubStats = () => {
           {/* Activity Breakdown */}
           <motion.div
             variants={itemVariants}
-            className="p-8 rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-sm"
+            className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/[0.02] backdrop-blur-sm"
           >
-            <h3 className="text-xl font-medium text-white mb-4 flex items-center gap-2">
+            <h3 className="text-xl font-medium text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
               <GitBranch className="w-5 h-5 text-blue-400" />
               Activity Breakdown
             </h3>
@@ -234,8 +234,8 @@ const GitHubStats = () => {
                     className="w-3 h-3 rounded-full mx-auto mb-1"
                     style={{ backgroundColor: item.fill }}
                   ></div>
-                  <p className="text-xs text-white/70">{item.name}</p>
-                  <p className="text-sm font-semibold text-white">{item.value}%</p>
+                  <p className="text-xs text-zinc-900 dark:text-white/70">{item.name}</p>
+                  <p className="text-sm font-semibold text-zinc-900 dark:text-white">{item.value}%</p>
                 </div>
               ))}
             </div>
@@ -245,9 +245,9 @@ const GitHubStats = () => {
         {/* Monthly Contributions Line Chart */}
         <motion.div
           variants={itemVariants}
-          className="p-8 rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-sm"
+          className="p-8 rounded-3xl border border-black/5 dark:border-white/5 bg-white/[0.02] backdrop-blur-sm"
         >
-          <h3 className="text-xl font-medium text-white mb-4 flex items-center gap-2">
+          <h3 className="text-xl font-medium text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
             <Star className="w-5 h-5 text-amber-400" />
             Monthly Contribution Trend (Last Year)
           </h3>
@@ -277,7 +277,7 @@ const GitHubStats = () => {
               />
             </LineChart>
           </ResponsiveContainer>
-          <p className="text-xs text-white/60 mt-4 text-center">
+          <p className="text-xs text-zinc-900 dark:text-white/60 mt-4 text-center">
             Consistent contributions with an average of 62 commits per month
           </p>
         </motion.div>
@@ -285,14 +285,14 @@ const GitHubStats = () => {
         {/* Call to Action */}
         <motion.div
           variants={itemVariants}
-          className="mt-12 p-8 sm:p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-green-500/10 to-blue-500/10"
+          className="mt-12 p-8 sm:p-10 rounded-3xl border border-black/10 dark:border-white/10 bg-gradient-to-br from-green-500/10 to-blue-500/10"
         >
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-zinc-900 dark:text-white mb-2">
                 Explore Full GitHub Profile
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="text-zinc-900 dark:text-white/95 text-sm">
                 View all repositories, projects, and contributions on GitHub
               </p>
             </div>
@@ -302,7 +302,7 @@ const GitHubStats = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: isMobile ? 1 : 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-white/90 transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-900 dark:bg-white text-zinc-50 dark:text-black font-semibold hover:bg-black/90 dark:bg-white/90 transition-colors whitespace-nowrap"
             >
               <Github className="w-5 h-5" />
               Visit GitHub

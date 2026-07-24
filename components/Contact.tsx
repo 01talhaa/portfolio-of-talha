@@ -80,7 +80,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="relative py-24 px-6 sm:px-8 bg-black overflow-hidden border-t border-white/5">
+    <section id="contact" className="relative py-24 px-6 sm:px-8 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
       <motion.div
         className="max-w-5xl mx-auto z-10 relative"
         variants={containerVariants}
@@ -90,23 +90,23 @@ const Contact = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+          <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
             08. Communication
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white">
             Contact
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto font-light text-lg">
+          <p className="text-zinc-900 dark:text-white/95 max-w-2xl mx-auto font-light text-lg">
             Have an ambitious project, a systemic challenge, or a venture in mind? Let&apos;s engineer the solution together.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Contact Form */}
-          <motion.div variants={itemVariants} className="bg-transparent border border-white/10 rounded-3xl p-8 sm:p-10 shadow-2xl">
+          <motion.div variants={itemVariants} className="bg-transparent border border-black/10 dark:border-white/10 rounded-3xl p-8 sm:p-10 shadow-2xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-xs font-medium tracking-wider text-white/80 uppercase mb-2">
+                <label htmlFor="name" className="block text-xs font-medium tracking-wider text-zinc-900 dark:text-white/95 uppercase mb-2">
                   Name
                 </label>
                 <input
@@ -116,13 +116,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 focus:bg-white/[0.05] transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-black/10 dark:border-white/10 text-zinc-900 dark:text-white placeholder-zinc-600 focus:outline-none focus:border-black/40 dark:border-white/40 focus:bg-white/[0.05] transition-all"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-xs font-medium tracking-wider text-white/80 uppercase mb-2">
+                <label htmlFor="email" className="block text-xs font-medium tracking-wider text-zinc-900 dark:text-white/95 uppercase mb-2">
                   Email Configuration
                 </label>
                 <input
@@ -132,13 +132,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 focus:bg-white/[0.05] transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-black/10 dark:border-white/10 text-zinc-900 dark:text-white placeholder-zinc-600 focus:outline-none focus:border-black/40 dark:border-white/40 focus:bg-white/[0.05] transition-all"
                   placeholder="john@startup.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-medium tracking-wider text-white/80 uppercase mb-2">
+                <label htmlFor="message" className="block text-xs font-medium tracking-wider text-zinc-900 dark:text-white/95 uppercase mb-2">
                   Message 
                 </label>
                 <textarea
@@ -148,7 +148,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 focus:bg-white/[0.05] transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-black/10 dark:border-white/10 text-zinc-900 dark:text-white placeholder-zinc-600 focus:outline-none focus:border-black/40 dark:border-white/40 focus:bg-white/[0.05] transition-all resize-none"
                   placeholder="Initiate message payload..."
                 />
               </div>
@@ -157,7 +157,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full px-6 py-4 rounded-xl font-medium tracking-wide bg-white text-black hover:bg-zinc-200 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                className="w-full px-6 py-4 rounded-xl font-medium tracking-wide bg-zinc-900 dark:bg-white text-zinc-50 dark:text-black hover:bg-zinc-200 transition-colors shadow-[0_0_20px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
                 {submitted ? 'SENT ✓' : 'MESSAGE'}
               </motion.button>
@@ -175,19 +175,19 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ x: 6, backgroundColor: 'rgba(255,255,255,0.05)' }}
-                  className="group p-6 rounded-2xl border border-white/10 bg-transparent transition-all block"
+                  className="group p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-transparent transition-all block"
                 >
                   <div className="flex items-center gap-6">
-                    <div className="p-3 rounded-xl border border-white/10 bg-white/5 group-hover:bg-white group-hover:border-white transition-colors duration-300">
-                      <Icon className="w-6 h-6 text-white/80 group-hover:text-black transition-colors" />
+                    <div className="p-3 rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 group-hover:bg-zinc-900 dark:hover:bg-white group-hover:border-white transition-colors duration-300">
+                      <Icon className="w-6 h-6 text-zinc-900 dark:text-white/95 group-hover:text-zinc-50 dark:hover:text-black transition-colors" />
                     </div>
                     <div className="flex-1">
-                      <p className="font-medium tracking-tight text-white mb-1">
+                      <p className="font-medium tracking-tight text-zinc-900 dark:text-white mb-1">
                         {method.label}
                       </p>
-                      <p className="text-sm font-light text-white/80">{method.value}</p>
+                      <p className="text-sm font-light text-zinc-900 dark:text-white/95">{method.value}</p>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-white/80 opacity-0 group-hover:opacity-100 group-hover:text-white transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    <ExternalLink className="w-5 h-5 text-zinc-900 dark:text-white/95 opacity-0 group-hover:opacity-100 group-hover:text-zinc-900 dark:hover:text-white transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </div>
                 </motion.a>
               )

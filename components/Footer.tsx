@@ -45,16 +45,16 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="relative border-t border-white/10 bg-[#050505]">
+    <footer className="relative border-t border-black/10 dark:border-white/10 bg-zinc-50 dark:bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         {/* Top Section */}
         <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 justify-items-center md:justify-items-start text-center md:text-left">
           {/* Brand */}
           <div className="col-span-1 lg:col-span-1 space-y-6 text-center md:text-left">
-            <h3 className="text-xl font-medium tracking-tight text-white">
+            <h3 className="text-xl font-medium tracking-tight text-zinc-900 dark:text-white">
               A B S Talha
             </h3>
-            <p className="text-sm font-light text-white/80 leading-relaxed">
+            <p className="text-sm font-light text-zinc-900 dark:text-white/95 leading-relaxed">
               Engineering scalable platforms, leading technical architectures, and constructing the future of the web.
             </p>
             <div className="flex gap-4 justify-center md:justify-start">
@@ -67,7 +67,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -2 }}
-                    className="p-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white hover:border-white text-white/80 hover:text-black transition-colors"
+                    className="p-2.5 rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-zinc-900 dark:hover:bg-white hover:border-white text-zinc-900 dark:text-white/95 hover:text-zinc-50 dark:hover:text-black transition-colors"
                     aria-label={social.label}
                   >
                     <Icon size={18} />
@@ -80,7 +80,7 @@ const Footer = () => {
           {/* Links */}
           {footerLinks.map((section, idx) => (
             <div key={idx} className="col-span-1 text-center md:text-left">
-              <h4 className="font-medium tracking-tight text-white mb-6 text-xl">
+              <h4 className="font-medium tracking-tight text-zinc-900 dark:text-white mb-6 text-xl">
                 {section.heading}
               </h4>
               <ul className="space-y-4">
@@ -88,13 +88,13 @@ const Footer = () => {
                   <li key={linkIdx}>
                     <a
                       href={link.href}
-                      className="text-sm font-light text-white/80 hover:text-white transition-colors flex items-center gap-2 group"
+                      className="text-sm font-light text-zinc-900 dark:text-white/95 hover:text-zinc-900 dark:hover:text-white transition-colors flex items-center gap-2 group"
                     >
                       {link.label}
                       {link.href.startsWith('http') && (
                         <ExternalLink
                           size={12}
-                          className="opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all text-white/80"
+                          className="opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all text-zinc-900 dark:text-white/95"
                         />
                       )}
                     </a>
@@ -106,21 +106,21 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-white/10"></div>
+        <div className="h-px bg-black/10 dark:bg-white/10"></div>
 
         {/* Bottom Section */}
         <div className="py-8 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6">
-          <p className="text-sm font-light text-white/80">
+          <p className="text-sm font-light text-zinc-900 dark:text-white/95">
             © {new Date().getFullYear()} ABS Talha. All rights reserved.
           </p>
 
           <div className="flex items-center gap-6">
-            <p className="text-xs font-mono text-white/80">Developed By <a href="https://pqrix.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">PQRIX Tech</a></p>
+            <p className="text-xs font-mono text-zinc-900 dark:text-white/95">Developed By <a href="https://pqrix.com" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-900 dark:hover:text-white transition-colors">PQRIX Tech</a></p>
             <motion.button
               onClick={scrollToTop}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="p-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 text-white transition-colors"
+              className="p-2.5 rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:bg-white/10 hover:border-black/20 dark:border-white/20 text-zinc-900 dark:text-white transition-colors"
               aria-label="Scroll to top"
             >
               <ArrowUp size={16} />

@@ -77,17 +77,17 @@ const Experience = () => {
   // On mobile: skip all animation logic entirely — render static HTML instantly
   if (isMobile) {
     return (
-      <section id="experience" className="relative py-16 px-4 bg-black overflow-hidden border-t border-white/5">
+      <section id="experience" className="relative py-16 px-4 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="mb-12 space-y-3">
-            <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+            <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
               02. Professional Journey
             </span>
-            <h2 className="text-3xl font-bold tracking-tight text-white mb-4">
+            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">
               Experience & Impact
             </h2>
-            <p className="text-white/80 text-base font-light max-w-2xl leading-relaxed">
+            <p className="text-zinc-900 dark:text-white/95 text-base font-light max-w-2xl leading-relaxed">
               A timeline of building ambitious products, architecting robust systems, and delivering measurable impact.
             </p>
           </div>
@@ -98,27 +98,27 @@ const Experience = () => {
               <div key={idx} className="relative">
                 {/* Timeline Line */}
                 {idx !== experiences.length - 1 && (
-                  <div className="absolute left-[19px] top-12 bottom-[-16px] w-[1px] bg-white/10"></div>
+                  <div className="absolute left-[19px] top-12 bottom-[-16px] w-[1px] bg-black/10 dark:bg-white/10"></div>
                 )}
 
                 {/* Timeline Dot */}
-                <div className="absolute left-3 top-6 w-3 h-3 rounded-full border-2 border-zinc-500 bg-black z-10 box-content shadow-[0_0_0_6px_black]"></div>
+                <div className="absolute left-3 top-6 w-3 h-3 rounded-full border-2 border-zinc-500 bg-zinc-50 dark:bg-black z-10 box-content shadow-[0_0_0_6px_black]"></div>
 
-                <div className="ml-12 p-5 rounded-2xl border border-white/5 bg-transparent">
+                <div className="ml-12 p-5 rounded-2xl border border-black/5 dark:border-white/5 bg-transparent">
                   <div className="flex flex-col gap-2 mb-4">
                     <div>
-                      <h3 className="text-base font-medium tracking-tight text-white mb-0.5">{exp.role}</h3>
-                      <p className="text-white/80 text-sm font-medium">{exp.company}</p>
+                      <h3 className="text-base font-medium tracking-tight text-zinc-900 dark:text-white mb-0.5">{exp.role}</h3>
+                      <p className="text-zinc-900 dark:text-white/95 text-sm font-medium">{exp.company}</p>
                     </div>
-                    <div className="inline-flex self-start px-2.5 py-1 rounded-full border border-white/10 bg-white/5">
-                      <span className="text-xs font-medium text-white/80 whitespace-nowrap">{exp.period}</span>
+                    <div className="inline-flex self-start px-2.5 py-1 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
+                      <span className="text-xs font-medium text-zinc-900 dark:text-white/95 whitespace-nowrap">{exp.period}</span>
                     </div>
                   </div>
 
                   <ul className="space-y-2.5">
                     {exp.highlights.map((h, i) => (
-                      <li key={i} className="flex gap-3 text-xs text-white/80 font-light leading-relaxed">
-                        <span className="text-white/80 flex-shrink-0 mt-0.5">—</span>
+                      <li key={i} className="flex gap-3 text-xs text-zinc-900 dark:text-white/95 font-light leading-relaxed">
+                        <span className="text-zinc-900 dark:text-white/95 flex-shrink-0 mt-0.5">—</span>
                         {h}
                       </li>
                     ))}
@@ -147,7 +147,7 @@ const Experience = () => {
   }
 
   return (
-    <section id="experience" className="relative py-24 px-6 sm:px-8 bg-black overflow-hidden border-t border-white/5">
+    <section id="experience" className="relative py-24 px-6 sm:px-8 bg-zinc-50 dark:bg-black overflow-hidden border-t border-black/5 dark:border-white/5">
       <motion.div
         className="max-w-4xl mx-auto z-10 relative"
         variants={containerVariants}
@@ -157,13 +157,13 @@ const Experience = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="mb-16 space-y-4">
-          <span className="text-xs font-medium tracking-widest text-white/80 uppercase">
+          <span className="text-xs font-medium tracking-widest text-zinc-900 dark:text-white/95 uppercase">
             02. Professional Journey
           </span>
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6">
             Experience & Impact
           </h2>
-          <p className="text-white/80 text-lg font-light max-w-2xl leading-relaxed">
+          <p className="text-zinc-900 dark:text-white/95 text-lg font-light max-w-2xl leading-relaxed">
             A timeline of building ambitious products, architecting robust systems, and delivering measurable impact.
           </p>
         </motion.div>
@@ -178,27 +178,27 @@ const Experience = () => {
             >
               {/* Timeline Line */}
               {idx !== experiences.length - 1 && (
-                <div className="absolute left-[27px] top-16 bottom-[-16px] w-[1px] bg-white/10 group-hover:bg-white/30 transition-colors"></div>
+                <div className="absolute left-[27px] top-16 bottom-[-16px] w-[1px] bg-black/10 dark:bg-white/10 group-hover:bg-black/30 dark:bg-white/30 transition-colors"></div>
               )}
 
               {/* Timeline Dot */}
-              <div className="absolute left-4 top-8 w-4 h-4 rounded-full border-2 border-zinc-500 bg-black group-hover:border-white group-hover:bg-white transition-all duration-300 z-10 box-content shadow-[0_0_0_8px_black]"></div>
+              <div className="absolute left-4 top-8 w-4 h-4 rounded-full border-2 border-zinc-500 bg-zinc-50 dark:bg-black group-hover:border-white group-hover:bg-zinc-900 dark:hover:bg-white transition-all duration-300 z-10 box-content shadow-[0_0_0_8px_black]"></div>
 
-              <div className="ml-16 sm:ml-20 p-8 sm:p-10 rounded-3xl border border-white/5 bg-transparent group-hover:border-white/10 group-hover:bg-white/[0.02] transition-colors duration-300">
+              <div className="ml-16 sm:ml-20 p-8 sm:p-10 rounded-3xl border border-black/5 dark:border-white/5 bg-transparent group-hover:border-black/10 dark:border-white/10 group-hover:bg-white/[0.02] transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                   <div>
-                    <h3 className="text-xl font-medium tracking-tight text-white mb-1">{exp.role}</h3>
-                    <p className="text-white/80 font-medium">{exp.company}</p>
+                    <h3 className="text-xl font-medium tracking-tight text-zinc-900 dark:text-white mb-1">{exp.role}</h3>
+                    <p className="text-zinc-900 dark:text-white/95 font-medium">{exp.company}</p>
                   </div>
-                  <div className="inline-flex px-3 py-1.5 rounded-full border border-white/10 bg-white/5 h-fit">
-                    <span className="text-xs font-medium text-white/80 whitespace-nowrap">{exp.period}</span>
+                  <div className="inline-flex px-3 py-1.5 rounded-full border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5 h-fit">
+                    <span className="text-xs font-medium text-zinc-900 dark:text-white/95 whitespace-nowrap">{exp.period}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-3">
                   {exp.highlights.map((h, i) => (
-                    <li key={i} className="flex gap-4 text-sm text-white/80 font-light leading-relaxed">
-                      <span className="text-white/80 flex-shrink-0 mt-1">—</span>
+                    <li key={i} className="flex gap-4 text-sm text-zinc-900 dark:text-white/95 font-light leading-relaxed">
+                      <span className="text-zinc-900 dark:text-white/95 flex-shrink-0 mt-1">—</span>
                       {h}
                     </li>
                   ))}
